@@ -1,5 +1,4 @@
 log/*.log
-config/database.yml
 *~
 db/*.sqlite*
 .DS_Store
