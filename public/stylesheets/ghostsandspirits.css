@@ -1,0 +1,202 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+hr {
+    color: #3C1E04; /* for IE */
+    background-color: #3C1E04; /* for Opera and Mozilla */
+    height: 1px; 
+    border: 0px;   
+}
+
+input, textarea {
+    border: 1px solid #3C1E04;
+}
+
+a {
+  color: #3C1E04 ;
+  background-color: transparent ;
+  text-decoration: none ;
+  margin: 0 ;
+  padding: 0 1px 2px 1px ;
+}
+
+a:hover {
+  color: #B82922 ;
+  text-decoration: underline ;
+}
+
+body {    
+    background-image: url(/images/background.jpg);       
+    margin: 0px; 
+}      
+
+#center_of_window {
+    width: 770px;    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header_graphic {
+    height: 283px;    
+}
+
+#wimpy_player {    
+    height: 0px;    
+    position: relative;
+    top: 246px;
+    left: 293px;
+    z-index: 99;
+}
+
+#content {
+    background-image: url(/images/paper_background.png);       
+    position: relative;
+    left: 68px;
+    width: 700px;       
+}
+
+#navbar_and_main_content {
+    margin-left: 36px;
+    margin-right: 36px;     
+}
+
+#main_content_area {    
+    padding-bottom: 24px;
+}
+
+#footer {
+    text-align: center;
+    border-top: 1px solid #3C1E04;
+    padding: 4px 0px 4px 0px;
+}
+
+.html_part_missing_message { 
+    font-size: 10px; 
+    color: red;
+}
+
+#story_song h1, #album_song h1 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.link_to_other_page_for_song {
+    font-size: 80%;
+    text-align: center;
+}
+
+.song_subheading {
+    font-size: 150%;
+    color: #221300;
+    font-weight: bold;    
+}
+
+.song_subheading_bracket, .home_page_bracket {
+   font-size: 167%; 
+}
+
+.song_subsection {
+    margin-left: 40px;
+}
+
+.song_subsection p {
+    margin-top: 0px;
+}
+
+#comment_list {
+    border-top: 1px solid #3C1E04;  
+}
+
+.comment {
+    padding: 4px;
+    margin: 4px;    
+}
+
+.comment_comment p {
+    margin-top: 0px; 
+}
+
+.comment .comment_author_name {
+    font-weight: bold;
+}
+
+.comment .comment_created_at {
+    font-size: 70%;
+}
+
+#comment_form {
+    border: 1px solid #3C1E04;
+    padding: 0px 16px 16px 16px;    
+}
+
+.comment_form_field_and_label {
+    margin-bottom: 16px;
+}
+
+#leave_a_comment {
+    margin-top: 16px;
+}
+
+#errorExplanation {
+    margin-top: 16px;    
+    margin-bottom: 16px;
+}
+
+div.fieldWithErrors {
+   display: inline; /* prevent the error divs from forcing the label text down to the next line */
+}
+
+div.fieldWithErrors textarea {
+    background-color: #FFDDD1;
+}
+
+input.button, input.button_hov {
+   color: #000;      
+}
+
+input.button_hov {
+   border-color: #586843;   
+}
+
+#home_content {
+    font-size: 200%;
+    text-align: center;   
+    padding-top: 24px;
+    padding-top: 24px;
+}
+
+#home_content p {
+    margin: 0px;
+}
+
+.home_page_first_p {
+    padding-bottom: 16px;    
+}
+
+.song_link_text {  
+  color: #B82922 ;
+}
+
+#comment_form div {
+  margin: 20px 10px;
+}
+
+#comment_errors {
+    background-color:#FFDDD1;
+    border:2px solid #B73204;
+    color:#571802;
+    padding: 0px 40px;
+}
+
+div#errorExplanation h2, 
+div#errorExplanation p {
+    display: none;        
+}
+
+div#errorExplanation {
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}

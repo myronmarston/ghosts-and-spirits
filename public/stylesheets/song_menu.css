@@ -1,0 +1,40 @@
+/* This CSS positions the divs for the Song Menu, so we can have them */
+/*   enclosed in giant brackets.                                      */
+   
+div#song_menu_wrapper{
+    float: left;
+    width: 100%;
+}
+
+div#song_menu_content{    
+    margin: 32px 0px 0px 0px;
+    text-align: center;    
+}
+
+div#song_menu_before_bracket{
+    float: left;
+    width: 60px;
+    margin-left: -613px;
+    text-align: left;
+    font-size: 120px;
+}
+
+div#song_menu_after_bracket{
+    float: left;
+    width: 60px;
+    margin-left: -78px;
+    text-align: right;
+    font-size: 120px;
+}
+
+div#song_menu_footer{
+    clear: left;
+    width: 100%;    
+}
+
+div#song_navigation_label{
+    font-size: 110%;
+    font-weight: bold;
+    border-bottom: 1px solid #3C1E04;
+    margin: 8px 64px;        
+}

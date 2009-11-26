@@ -1,0 +1,83 @@
+
+.navbar {
+  height: 45px ;
+  background-color: transparent ;
+  font-size: 19px;
+  border-bottom: 1px solid #3C1E04;
+  border-top: 1px solid #3C1E04;  
+}
+
+.menu_item_text {
+  position: relative;
+  top: -2px;  
+}
+
+.menu_item_bracket {
+  font-size: 34px;
+} 
+
+#suckerfish * {
+  margin: 0 ;
+  padding: 0 ;
+}
+
+#suckerfish, #suckerfish ul {
+  padding: 0 ;
+  margin: 0 ;
+  width: 100% ;
+  list-style: none ;  
+  z-index: 999 ;
+}
+
+#suckerfish a {
+  color: #3C1E04;
+  display: block ;
+}
+
+#suckerfish a:hover {
+  color: #B82922 ;
+  text-decoration: none ;
+}
+
+#suckerfish li {
+  padding: 0px 0px 0px 6px ;
+  float: left ;
+  color: #B82922 ;
+}
+
+#suckerfish li ul li a {
+  margin-left: .25em ;
+  width: 10.75em ;
+}
+
+#suckerfish li ul li a.daddy {
+  background-image: url("/goldberg/images/daddy_rightarrow.gif") ;
+  background-position: right center ;
+  background-repeat: no-repeat ;
+}
+
+#suckerfish li ul li {
+  padding: 0 ;
+  width: 11em ;
+  border-bottom: .075em solid white ;
+  border-right: .075em solid white ;
+}
+
+#suckerfish li ul {
+  position: absolute ;
+  background: #6d7a73 ;
+  width: 11em ;
+  left: -999em ;
+}
+
+#suckerfish li ul ul {
+  margin: -2em 0 0 11.075em ;
+}
+
+#suckerfish li:hover ul ul, #suckerfish li.sfhover ul ul {
+  left: -999em ;
+}
+
+#suckerfish li:hover ul, #suckerfish li li:hover ul, #suckerfish li.sfhover ul, #suckerfish li li.sfhover ul {
+  left: auto ;
+}

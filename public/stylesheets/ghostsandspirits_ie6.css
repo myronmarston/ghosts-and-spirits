@@ -1,0 +1,7 @@
+/* 
+    Contains CSS Hacks for when IE 6 is running.
+*/
+
+#header_graphic {
+    margin-bottom: -4px; /* in IE 6 there is a 4 pixel gap between the menu and the header graphic */    
+}
