@@ -34,6 +34,10 @@
   display: block ;
 }
 
+#suckerfish li.selected a {
+	color:#B82922;
+}
+
 #suckerfish a:hover {
   color: #B82922 ;
   text-decoration: none ;
