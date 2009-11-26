@@ -7,9 +7,10 @@
   border-top: 1px solid #3C1E04;  
 }
 
-.menu_item_text {
+#suckerfish .menu_item_text {
   position: relative;
-  top: -2px;  
+  top: -2px;
+  margin: -5px;
 }
 
 .menu_item_bracket {
