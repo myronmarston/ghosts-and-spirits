@@ -1,5 +1,7 @@
+songs/**/*.mp3
 log/*.log
 *~
 db/*.sqlite*
 .DS_Store
 tmp/radiant_config_cache.txt
+tmp/cache/*
