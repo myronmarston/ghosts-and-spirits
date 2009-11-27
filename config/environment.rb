@@ -77,4 +77,8 @@ Radiant::Initializer.run do |config|
       inflect.uncountable 'config'
     end
   end
+
+  config.gem 'will_paginate'
+  config.gem 'fastercsv'
+  config.gem 'sanitize'
 end
