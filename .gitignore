@@ -6,3 +6,4 @@ db/*.sqlite*
 tmp/radiant_config_cache.txt
 tmp/cache/*
 db/original_site_data/*.sql
+config/development_config_vars.rb
