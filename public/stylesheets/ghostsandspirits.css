@@ -111,7 +111,7 @@ body {
 
 .comment {
     padding: 4px;
-    margin: 4px;    
+    margin: 4px 4px 4px 40px;
 }
 
 .comment_comment p {
@@ -123,12 +123,13 @@ body {
 }
 
 .comment .comment_created_at {
-    font-size: 70%;
+    font-size: 80%;
 }
 
-#comment_form {
+.comments form {
     border: 1px solid #3C1E04;
-    padding: 0px 16px 16px 16px;    
+    padding: 0px 16px 16px 16px;
+    margin-top: 16px;
 }
 
 .comment_form_field_and_label {
@@ -179,7 +180,15 @@ input.button_hov {
   color: #B82922 ;
 }
 
-#comment_form div {
+.comments form div {
+  margin: 20px 10px;
+}
+
+.comments form .textfield {
+  width: 250px;
+}
+
+.comments form h3 {
   margin: 20px 10px;
 }
 
@@ -187,7 +196,13 @@ input.button_hov {
     background-color:#FFDDD1;
     border:2px solid #B73204;
     color:#571802;
-    padding: 0px 40px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.comment_error {
+  color:#B82922;
+  margin-top:0px;
 }
 
 div#errorExplanation h2, 
