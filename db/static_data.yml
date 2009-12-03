@@ -1,0 +1,2366 @@
+--- 
+name: Last export
+records: 
+  Snippets: 
+    "11": 
+      updated_by_id: 1
+      name: song_header
+      created_at: 2009-11-26 07:31:17 Z
+      filter_id: ""
+      updated_at: 2009-11-26 22:48:40 Z
+      created_by_id: 1
+      lock_version: 5
+      id: 11
+      content: |-
+        <h1><r:title /></h1>
+        
+        <div class="link_to_other_page_for_song">
+          <a href="/<r:puts value_for="vars[other_parent_path]" />/<r:slug />/">{ <r:puts value_for="vars[other_page_type]" /> Page }</a>
+        
+          <r:if cond="vars[other_page_type] == 'Story'">
+            <r:if cond="slug matches /trust\-in\-a\-sigh|first\-love|only\-a\-mother/">
+              <br />
+              <a href="/songs/downloads/<r:slug />.mp3">{ Download MP3 }</a>
+            </r:if>
+          </r:if>
+        </div>
+    "12": 
+      updated_by_id: 1
+      name: wimpy_player
+      created_at: 2009-11-26 17:17:43 Z
+      filter_id: ""
+      updated_at: 2009-12-03 21:08:41 Z
+      created_by_id: 1
+      lock_version: 10
+      id: 12
+      content: |-
+        <r:if cond="vars[wimpy] == true">
+          <div id="wimpy_player">
+            <!-- START WIMPY PLAYER CODE -->
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="136" height="36" id="wimpy3298">
+              <param name="movie" value="/wimpy/wimpy.swf" />
+              <param name="play" value="true" />
+              <param name="loop" value="false" />
+              <param name="menu" value="false" />
+              <param name="quality" value="high" />
+              <param name="scale" value="noscale" />
+              <param name="salign" value="tl" />
+              <param name="wmode" value="transparent" />
+              <param name="bgcolor" value="FFFFFF" />
+              <param name="allowscriptaccess" value="always" />
+              <param name="flashvars" value="<r:snippet name="wimpy_flash_vars" />" />
+              <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="/wimpy/wimpy.swf" width="136" height="36">
+                  <param name="play" value="true" />
+                  <param name="loop" value="false" />
+                  <param name="menu" value="false" />
+                  <param name="quality" value="high" />
+                  <param name="scale" value="noscale" />
+                  <param name="salign" value="tl" />
+                  <param name="wmode" value="transparent" />
+                  <param name="bgcolor" value="FFFFFF" />
+                  <param name="allowscriptaccess" value="always" />
+                  <param name="flashvars" value="<r:snippet name="wimpy_flash_vars" />" />
+              <!--<![endif]-->
+        
+              <!--[if !IE]>-->
+                </object>
+              <!--<![endif]-->
+            </object>
+            <!-- END WIMPY PLAYER CODE -->
+          </div>
+        </r:if>
+    "7": 
+      updated_by_id: 1
+      name: song_credits
+      created_at: 2009-11-26 03:29:58 Z
+      filter_id: ""
+      updated_at: 2009-11-26 03:31:40 Z
+      created_by_id: 1
+      lock_version: 1
+      id: 7
+      content: |-
+        <div class="song_subheading">
+            <span class="song_subheading_bracket">{</span>
+            Credits
+            <span class="song_subheading_bracket">}</span>
+        </div>
+        <div class="song_subsection"><r:puts value_for="vars[credits]" /></div>
+    "13": 
+      updated_by_id: 1
+      name: wimpy_flash_vars
+      created_at: 2009-11-26 17:19:13 Z
+      filter_id: ""
+      updated_at: 2009-11-26 18:21:32 Z
+      created_by_id: 1
+      lock_version: 1
+      id: 13
+      content: wimpyApp=/wimpy/playlists/<r:slug />.xml&amp;wimpySkin=/wimpy/wimpy_skin.xml&amp;theVolume=50&amp;startPlayingOnload=yes&amp;loopPlaylist=no&amp;autoAdvance=no&amp;popUpHelp=no&amp
+    "8": 
+      updated_by_id: 1
+      name: song_musicians
+      created_at: 2009-11-26 03:36:17 Z
+      filter_id: ""
+      updated_at: 2009-11-26 21:02:36 Z
+      created_by_id: 1
+      lock_version: 3
+      id: 8
+      content: |-
+        <div class="song_subheading">
+            <span class="song_subheading_bracket">{</span>
+            Musicians
+            <span class="song_subheading_bracket">}</span>
+        </div>
+        <div class="song_subsection">
+        <p><r:yield /></p>
+        </div>
+    "24": 
+      updated_by_id: 
+      name: rating
+      created_at: 2009-12-01 00:44:48 Z
+      filter_id: 
+      updated_at: 2009-12-01 00:44:48 Z
+      created_by_id: 
+      lock_version: 0
+      id: 24
+      content: |-
+        <div id="rating_container">
+          <r:rating>
+            <p>
+              Currently rated <span class="rating_average"><r:average /></span>/5 stars (<span class="rating_vote_description"><r:vote_description /></span>)
+            </p>
+        
+            <r:form>
+              <div class="current_rating" style="width: <r:image_width />px;">  Currently <span class="rating_average"><r:average /></span>/5 stars. </div>
+              <ol>
+                <r:points:each>
+                  <li>
+                    <button type="submit" name="rating" class="star<r:point_value />" value="<r:point_value />"></button>
+                  </li>
+                </r:points:each>
+              </ol>
+            </r:form>
+          </r:rating>
+        </div>
+    "14": 
+      updated_by_id: 1
+      name: wimpy_head_stuff
+      created_at: 2009-11-26 17:25:31 Z
+      filter_id: ""
+      updated_at: 2009-11-26 18:22:00 Z
+      created_by_id: 1
+      lock_version: 8
+      id: 14
+      content: |-
+        <r:if cond="vars[wimpy] == true">
+          <script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" type="text/javascript"></script>
+        
+          <script type="text/javascript">
+            //<![CDATA[swfobject.registerObject("wimpy3298", "6.0.47");//]]>
+          </script>
+        </r:if>
+    "9": 
+      updated_by_id: 1
+      name: song_musician
+      created_at: 2009-11-26 03:44:22 Z
+      filter_id: ""
+      updated_at: 2009-11-26 21:01:18 Z
+      created_by_id: 1
+      lock_version: 2
+      id: 9
+      content: <r:puts value_for="vars[musician]" />&#8212;<r:puts value_for="vars[instrument]" /><br />
+    "25": 
+      updated_by_id: 
+      name: rating_asset_includes
+      created_at: 2009-12-01 00:44:48 Z
+      filter_id: 
+      updated_at: 2009-12-01 00:44:48 Z
+      created_by_id: 
+      lock_version: 0
+      id: 25
+      content: |-
+        <link type="text/css" rel="Stylesheet" media="screen" href="/stylesheets/rating.css" />
+        <script src="/javascripts/rating.js" type="text/javascript"></script>
+    "15": 
+      updated_by_id: 1
+      name: header
+      created_at: 2009-11-26 17:48:39 Z
+      filter_id: ""
+      updated_at: 2009-11-26 18:23:47 Z
+      created_by_id: 1
+      lock_version: 1
+      id: 15
+      content: "<div id=\"header_graphic\">\r\n  <r:snippet name=\"wimpy_player\" />       \r\n  <img alt=\"Header_graphic\" height=\"283\" src=\"/images/header_graphic.png\" width=\"770\" />                      \r\n\
+        </div> "
+    "26": 
+      updated_by_id: 1
+      name: comments
+      created_at: 2009-12-01 06:14:22 Z
+      filter_id: ""
+      updated_at: 2009-12-02 21:13:38 Z
+      created_by_id: 
+      lock_version: 4
+      id: 26
+      content: |
+        <div class="comments">
+          <r:if_comments>
+            <hr />
+            <div class="song_subheading">
+              <span class="song_subheading_bracket">{</span>
+                Comments
+              <span class="song_subheading_bracket">}</span>
+            </div>
+            <r:comments:each>
+              <r:snippet name="comment" />
+            </r:comments:each>  
+          </r:if_comments>
+          <r:snippet name="comment_form" />
+        </div>
+
+    "16": 
+      updated_by_id: 1
+      name: song_navigation
+      created_at: 2009-11-26 19:42:29 Z
+      filter_id: ""
+      updated_at: 2009-12-01 00:36:26 Z
+      created_by_id: 1
+      lock_version: 3
+      id: 16
+      content: "<div id=\"song_menu_container\">\r\n  <div id=\"song_menu_wrapper\">\r\n    <div id=\"song_menu_content\">\r\n      <div id=\"song_navigation_label\">Song Navigation</div>\r\n\
+        \r\n      <r:children:each>\r\n        <r:snippet name=\"song_navigation_menu_item\" />\r\n      </r:children:each>\r\n    \r\n    </div>\r\n  </div>\r\n\
+        \r\n  <div id=\"song_menu_before_bracket\">{</div>\r\n  <div id=\"song_menu_after_bracket\">}</div>\r\n  <div id=\"song_menu_footer\"></div>\r\n\
+        </div>\r\n\
+        \r\n\
+        \r\n\
+        \r\n                    "
+    "1": 
+      updated_by_id: 1
+      name: navigation
+      created_at: 2009-11-26 01:13:23 Z
+      filter_id: ""
+      updated_at: 2009-12-02 22:33:26 Z
+      created_by_id: 1
+      lock_version: 8
+      id: 1
+      content: "<div class=\"navbar\">\r\n  <ul id=\"suckerfish\">\r\n    <r:navigation urls=\"Home: /\">\r\n      <r:normal><li><a href=\"<r:url />\"><r:snippet name=\"menu_item\"/></a></li></r:normal>\r\n      <r:here><li class=\"selected\"><r:snippet name=\"menu_item\"/></li></r:here>\r\n      <r:selected><li><a href=\"<r:url />\"><r:snippet name=\"menu_item\"/></a></li></r:selected>\r\n    </r:navigation>\r\n    <r:navigation urls=\"The Artist: /the-artist/ | The Album: /the-album/ | The Story: /the-story/ | The Press: /the-press/ | Buy: /buy/\">\r\n      <r:normal><li><a href=\"<r:url />\"><r:snippet name=\"menu_item\"/></a></li></r:normal>\r\n      <r:here><li class=\"selected\"><r:snippet name=\"menu_item\"/></li></r:here>\r\n      <r:selected><li class=\"selected\"><a href=\"<r:url />\"><r:snippet name=\"menu_item\"/></a></li></r:selected>\r\n    </r:navigation>\r\n  </ul>\r\n\
+        </div>\r\n\
+        \r\n\
+        \r\n\
+        \r\n                    "
+    "28": 
+      updated_by_id: 1
+      name: comment_spam_block
+      created_at: 2009-12-01 06:14:22 Z
+      filter_id: ""
+      updated_at: 2009-12-02 21:05:09 Z
+      created_by_id: 
+      lock_version: 8
+      id: 28
+      content: |-
+        <div>
+        <r:random>
+          <r:snippet name="comment_spam_question" question="What is 3 plus 8?">
+            <r:spam_answer_tag answer="11" />
+          </r:snippet>
+        
+          <r:snippet name="comment_spam_question" question="What is 5 minus 2?">
+            <r:spam_answer_tag answer="3" />
+          </r:snippet>
+        
+          <r:snippet name="comment_spam_question" question="What is SPAM spelled backwards?">
+            <r:spam_answer_tag answer="MAPS" />
+          </r:snippet>
+        
+          <r:snippet name="comment_spam_question" question='Type "CS Lewis" in the box below.'>
+            <r:spam_answer_tag answer="CS Lewis" />
+          </r:snippet>
+        </r:random>
+        <r:error on="spam_answer"><p class="comment_error">Answer <r:message /></p></r:error>
+        </div>
+    "2": 
+      updated_by_id: 1
+      name: menu_item
+      created_at: 2009-11-26 01:18:29 Z
+      filter_id: ""
+      updated_at: 2009-11-26 21:45:15 Z
+      created_by_id: 1
+      lock_version: 4
+      id: 2
+      content: |-
+        <span class="menu_item_bracket">{</span>
+        <span class="menu_item_text"><r:title /></span>
+        <span class="menu_item_bracket">}</span>
+    "29": 
+      updated_by_id: 1
+      name: comment_form
+      created_at: 2009-12-01 06:14:22 Z
+      filter_id: ""
+      updated_at: 2009-12-03 00:09:17 Z
+      created_by_id: 
+      lock_version: 17
+      id: 29
+      content: |
+        <r:page>
+          <r:if_enable_comments>
+            <r:comments:form>
+              <h3>Post a comment</h3>
+        
+              <r:error>
+                <div id="comment_errors">Please correct the errors below.</div>
+              </r:error>
+        
+              <div>
+                <r:text_field_tag name="author" size="35" id="author" class="required textfield" />
+                <label for="comment_author"><strong>Name</strong> (required)</label>
+                <r:error on="author"><p class="comment_error">Name <r:message /></p></r:error>
+              </div>
+        
+              <div>
+                <r:text_field_tag name="author_email" size="35" class="required textfield" />
+                <label for="comment_author_email"><strong>Email</strong> (required, but will not be displayed)</label>
+                <r:error on="author_email"><p class="comment_error">Email <r:message /></p></r:error>
+              </div>
+        
+              <div>
+                <r:text_field_tag name="author_url" size="35" class="textfield" />
+                <label for="comment_author_url"><strong>Website</strong></label>
+                <r:error on="author_url"><p class="comment_error">Website <r:message /></p></r:error>
+              </div>
+        
+              <div class="comment_form_field_and_label">
+                <label for="comment_content"><strong>Comment</strong></label><br />
+                <r:text_area_tag name="content" class="required" rows="10" cols="65" />
+                <r:error on="content"><p class="comment_error">Comment <r:message /></p></r:error>
+              </div>
+        
+              <r:if_comments_simple_spam_filter_enabled>
+                <r:snippet name="comment_spam_block" />
+              </r:if_comments_simple_spam_filter_enabled>
+        
+              <div><r:submit_tag name="submit" value="Post Comment" /></div>
+        
+            </r:comments:form>
+          </r:if_enable_comments>
+        </r:page>
+
+    "30": 
+      updated_by_id: 1
+      name: comment
+      created_at: 2009-12-02 18:22:17 Z
+      filter_id: ""
+      updated_at: 2009-12-02 19:08:39 Z
+      created_by_id: 1
+      lock_version: 3
+      id: 30
+      content: |
+        <r:comments:field>
+          <div class="comment" id="comment-<r:id/>">
+            <span class="comment_author_name">
+              <r:if_author_url><a href="<r:author_url/>" title="Visit <r:author/>'s website"></r:if_author_url>
+                <r:author/>
+              <r:if_author_url></a></r:if_author_url> said:
+            </span>
+        
+            <div class="comment_created_at">
+              on <r:date/>
+            </div>
+        
+            <div class="comment_comment"><r:content_html /></div>
+          </div>
+        </r:comments:field>
+
+    "31": 
+      updated_by_id: 1
+      name: comment_spam_question
+      created_at: 2009-12-02 20:35:02 Z
+      filter_id: ""
+      updated_at: 2009-12-02 21:03:45 Z
+      created_by_id: 1
+      lock_version: 2
+      id: 31
+      content: |-
+        <r:option>
+          <label for="comment_spam_answer"><r:puts value_for="vars[question]"/></label> (required)<br />
+          <r:yield />
+        </r:option>
+    "4": 
+      updated_by_id: 1
+      name: song_navigation_menu_item
+      created_at: 2009-11-26 02:08:38 Z
+      filter_id: ""
+      updated_at: 2009-11-26 20:24:02 Z
+      created_by_id: 1
+      lock_version: 19
+      id: 4
+      content: <span class="song_link_text"> <r:if_self><r:title /></r:if_self><r:unless_self><a href="<r:url />"><r:title /></a></r:unless_self> </span><r:cycle values="|,|,|,<br />" name="song_menu_item_seperator" />
+    "10": 
+      updated_by_id: 
+      name: song_lyrics
+      created_at: 2009-11-26 07:12:52 Z
+      filter_id: ""
+      updated_at: 2009-11-26 07:12:52 Z
+      created_by_id: 1
+      lock_version: 0
+      id: 10
+      content: |-
+        <div class="song_subheading">
+            <span class="song_subheading_bracket">{</span>
+            Lyrics
+            <span class="song_subheading_bracket">}</span>
+        </div>
+        <div class="song_subsection">
+            <div class="large_first_letter">
+                <r:yield />
+            </div>
+        </div>
+  Pages: 
+    "33": 
+      updated_by_id: 
+      slug: the-sunrise
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:18:00 Z
+      virtual: false
+      title: The Sunrise
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 17
+      id: 33
+      enable_comments: true
+      breadcrumb: The Sunrise
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:18:00 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "22": 
+      updated_by_id: 
+      slug: safety
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:07:39 Z
+      virtual: false
+      title: Safety
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 17
+      id: 22
+      enable_comments: true
+      breadcrumb: Safety
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:07:39 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "11": 
+      updated_by_id: 1
+      slug: bleeding-charity
+      class_name: ""
+      average_rating: 4.75
+      sitemap: true
+      created_at: 2009-11-26 19:26:34 Z
+      virtual: false
+      title: Bleeding Charity
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 85
+      id: 11
+      enable_comments: true
+      breadcrumb: Bleeding Charity
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:26:34 Z
+      description: ""
+      comments_count: 1
+      layout_id: 2
+      keywords: ""
+    "6": 
+      updated_by_id: 
+      slug: the-press
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 01:33:52 Z
+      virtual: false
+      title: The Press
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 1
+      id: 6
+      enable_comments: 
+      breadcrumb: The Press
+      parent_id: 1
+      status_id: 100
+      published_at: 2009-11-25 17:33:52 Z
+      description: ""
+      comments_count: 0
+      layout_id: 
+      keywords: ""
+    "23": 
+      updated_by_id: 
+      slug: bleeding-charity
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:08:30 Z
+      virtual: false
+      title: Bleeding Charity
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 23
+      id: 23
+      enable_comments: true
+      breadcrumb: Bleeding Charity
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:08:30 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "12": 
+      updated_by_id: 1
+      slug: thirst-for-water-inquiry-for-truth
+      class_name: ""
+      average_rating: 4.2
+      sitemap: true
+      created_at: 2009-11-26 19:27:48 Z
+      virtual: false
+      title: Thirst for Water, Inquiry for Truth
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:27 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 77
+      id: 12
+      enable_comments: true
+      breadcrumb: Thirst for Water, Inquiry for Truth
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:27:47 Z
+      description: ""
+      comments_count: 2
+      layout_id: 2
+      keywords: ""
+    "7": 
+      updated_by_id: 
+      slug: buy
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 01:34:25 Z
+      virtual: false
+      title: Buy
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 1
+      id: 7
+      enable_comments: 
+      breadcrumb: Buy
+      parent_id: 1
+      status_id: 100
+      published_at: 2009-11-25 17:34:25 Z
+      description: ""
+      comments_count: 0
+      layout_id: 
+      keywords: ""
+    "24": 
+      updated_by_id: 
+      slug: thirst-for-water-inquiry-for-truth
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:09:38 Z
+      virtual: false
+      title: Thirst for Water, Inquiry for Truth
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 14
+      id: 24
+      enable_comments: true
+      breadcrumb: Thirst for Water, Inquiry for Truth
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:09:38 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "13": 
+      updated_by_id: 1
+      slug: trust-in-a-sigh
+      class_name: ""
+      average_rating: 5.0
+      sitemap: true
+      created_at: 2009-11-26 19:28:41 Z
+      virtual: false
+      title: Trust in a Sigh
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:26 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 39
+      id: 13
+      enable_comments: true
+      breadcrumb: Trust in a Sigh
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:28:41 Z
+      description: ""
+      comments_count: 2
+      layout_id: 2
+      keywords: ""
+    "8": 
+      updated_by_id: 1
+      slug: the-grey-town
+      class_name: ""
+      average_rating: 4.63
+      sitemap: true
+      created_at: 2009-11-26 03:34:12 Z
+      virtual: false
+      title: The Grey Town
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 222
+      id: 8
+      enable_comments: true
+      breadcrumb: The Grey Town
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-25 19:34:24 Z
+      description: ""
+      comments_count: 1
+      layout_id: 2
+      keywords: ""
+    "25": 
+      updated_by_id: 
+      slug: trust-in-a-sigh
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:10:37 Z
+      virtual: false
+      title: Trust in a Sigh
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 5
+      id: 25
+      enable_comments: true
+      breadcrumb: Trust in a Sigh
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:10:37 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "14": 
+      updated_by_id: 1
+      slug: the-teacher
+      class_name: ""
+      average_rating: 4.67
+      sitemap: true
+      created_at: 2009-11-26 19:31:37 Z
+      virtual: false
+      title: The Teacher
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:27 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 42
+      id: 14
+      enable_comments: true
+      breadcrumb: The Teacher
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:31:37 Z
+      description: ""
+      comments_count: 1
+      layout_id: 2
+      keywords: ""
+    "9": 
+      updated_by_id: 1
+      slug: safety
+      class_name: ""
+      average_rating: 4.6
+      sitemap: true
+      created_at: 2009-11-26 19:20:20 Z
+      virtual: false
+      title: Safety
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 62
+      id: 9
+      enable_comments: true
+      breadcrumb: Safety
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:20:20 Z
+      description: ""
+      comments_count: 1
+      layout_id: 2
+      keywords: ""
+    "26": 
+      updated_by_id: 
+      slug: the-teacher
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:11:24 Z
+      virtual: false
+      title: The Teacher
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 11
+      id: 26
+      enable_comments: true
+      breadcrumb: The Teacher
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:11:24 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "15": 
+      updated_by_id: 1
+      slug: first-love
+      class_name: ""
+      average_rating: 5.0
+      sitemap: true
+      created_at: 2009-11-26 19:32:45 Z
+      virtual: false
+      title: First Love
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:25 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 116
+      id: 15
+      enable_comments: true
+      breadcrumb: First Love
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:32:45 Z
+      description: ""
+      comments_count: 3
+      layout_id: 2
+      keywords: ""
+    "27": 
+      updated_by_id: 
+      slug: first-love
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:13:00 Z
+      virtual: false
+      title: First Love
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 5
+      id: 27
+      enable_comments: true
+      breadcrumb: First Love
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:13:00 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "16": 
+      updated_by_id: 1
+      slug: only-a-mother
+      class_name: ""
+      average_rating: 4.75
+      sitemap: true
+      created_at: 2009-11-26 19:33:37 Z
+      virtual: false
+      title: (Only) a Mother
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 117
+      id: 16
+      enable_comments: true
+      breadcrumb: (Only) a Mother
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:33:37 Z
+      description: ""
+      comments_count: 3
+      layout_id: 2
+      keywords: ""
+    "28": 
+      updated_by_id: 
+      slug: only-a-mother
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:13:55 Z
+      virtual: false
+      title: (Only) a Mother
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 15
+      id: 28
+      enable_comments: true
+      breadcrumb: (Only) a Mother
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:13:55 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "17": 
+      updated_by_id: 1
+      slug: the-lizard-and-the-stallion
+      class_name: ""
+      average_rating: 4.0
+      sitemap: true
+      created_at: 2009-11-26 19:34:43 Z
+      virtual: false
+      title: The Lizard and the Stallion
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 63
+      id: 17
+      enable_comments: true
+      breadcrumb: The Lizard and the Stallion
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:34:43 Z
+      description: ""
+      comments_count: 1
+      layout_id: 2
+      keywords: ""
+    "1": 
+      updated_by_id: 
+      slug: /
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 00:50:06 Z
+      virtual: false
+      title: Home
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 2
+      id: 1
+      enable_comments: 
+      breadcrumb: Home
+      parent_id: 
+      status_id: 100
+      published_at: 2009-11-25 16:50:06 Z
+      description: ""
+      comments_count: 0
+      layout_id: 1
+      keywords: ""
+    "30": 
+      updated_by_id: 
+      slug: saint-sarah
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:15:34 Z
+      virtual: false
+      title: Saint Sarah
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 5
+      id: 30
+      enable_comments: true
+      breadcrumb: Saint Sarah
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:15:34 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "29": 
+      updated_by_id: 
+      slug: the-lizard-and-the-stallion
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:14:48 Z
+      virtual: false
+      title: The Lizard and the Stallion
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 17
+      id: 29
+      enable_comments: true
+      breadcrumb: The Lizard and the Stallion
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:14:48 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "18": 
+      updated_by_id: 1
+      slug: saint-sarah
+      class_name: ""
+      average_rating: 5.0
+      sitemap: true
+      created_at: 2009-11-26 19:35:33 Z
+      virtual: false
+      title: Saint Sarah
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:25 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 44
+      id: 18
+      enable_comments: true
+      breadcrumb: Saint Sarah
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:35:33 Z
+      description: ""
+      comments_count: 2
+      layout_id: 2
+      keywords: ""
+    "2": 
+      updated_by_id: 
+      slug: file-not-found
+      class_name: FileNotFoundPage
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 01:29:29 Z
+      virtual: true
+      title: File Not Found
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 2
+      id: 2
+      enable_comments: 
+      breadcrumb: File Not Found
+      parent_id: 1
+      status_id: 100
+      published_at: 2009-11-25 17:29:29 Z
+      description: ""
+      comments_count: 0
+      layout_id: 
+      keywords: ""
+    "20": 
+      updated_by_id: 1
+      slug: the-sunrise
+      class_name: ""
+      average_rating: 4.33
+      sitemap: true
+      created_at: 2009-11-26 19:37:24 Z
+      virtual: false
+      title: The Sunrise
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 58
+      id: 20
+      enable_comments: true
+      breadcrumb: The Sunrise
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:37:24 Z
+      description: ""
+      comments_count: 1
+      layout_id: 2
+      keywords: ""
+    "19": 
+      updated_by_id: 1
+      slug: vetoing-heaven
+      class_name: ""
+      average_rating: 4.75
+      sitemap: true
+      created_at: 2009-11-26 19:36:24 Z
+      virtual: false
+      title: Vetoing Heaven
+      change_frequency: weekly
+      updated_at: 2009-12-03 21:08:27 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 50
+      id: 19
+      enable_comments: true
+      breadcrumb: Vetoing Heaven
+      parent_id: 3
+      status_id: 100
+      published_at: 2009-11-26 11:36:23 Z
+      description: ""
+      comments_count: 1
+      layout_id: 2
+      keywords: ""
+    "3": 
+      updated_by_id: 
+      slug: the-album
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 01:31:21 Z
+      virtual: false
+      title: The Album
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 2
+      id: 3
+      enable_comments: 
+      breadcrumb: The Album
+      parent_id: 1
+      status_id: 100
+      published_at: 2009-11-25 17:31:21 Z
+      description: ""
+      comments_count: 0
+      layout_id: 
+      keywords: ""
+    "32": 
+      updated_by_id: 
+      slug: vetoing-heaven
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 22:17:23 Z
+      virtual: false
+      title: Vetoing Heaven
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:29 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 14
+      id: 32
+      enable_comments: true
+      breadcrumb: Vetoing Heaven
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:17:23 Z
+      description: ""
+      comments_count: 0
+      layout_id: 3
+      keywords: ""
+    "10": 
+      updated_by_id: 
+      slug: the-grey-town
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 19:24:07 Z
+      virtual: false
+      title: The Grey Town
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 41
+      id: 10
+      enable_comments: true
+      breadcrumb: The Grey Town
+      parent_id: 4
+      status_id: 100
+      published_at: 2009-11-26 14:03:12 Z
+      description: ""
+      comments_count: 1
+      layout_id: 3
+      keywords: ""
+    "4": 
+      updated_by_id: 
+      slug: the-story
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 01:32:27 Z
+      virtual: false
+      title: The Story
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 2
+      id: 4
+      enable_comments: 
+      breadcrumb: The Story
+      parent_id: 1
+      status_id: 100
+      published_at: 2009-11-25 17:32:27 Z
+      description: ""
+      comments_count: 0
+      layout_id: 
+      keywords: ""
+    "5": 
+      updated_by_id: 
+      slug: the-artist
+      class_name: ""
+      average_rating: 0.0
+      sitemap: true
+      created_at: 2009-11-26 01:33:15 Z
+      virtual: false
+      title: The Artist
+      change_frequency: weekly
+      updated_at: 2009-12-02 22:36:28 Z
+      created_by_id: 1
+      priority: "0.5"
+      lock_version: 1
+      id: 5
+      enable_comments: 
+      breadcrumb: The Artist
+      parent_id: 1
+      status_id: 100
+      published_at: 2009-11-25 17:33:15 Z
+      description: ""
+      comments_count: 0
+      layout_id: 
+      keywords: ""
+  Layouts: 
+    "1": 
+      updated_by_id: 1
+      name: master
+      created_at: 2009-11-26 00:47:53 Z
+      content_type: ""
+      updated_at: 2009-12-02 22:32:15 Z
+      created_by_id: 1
+      lock_version: 17
+      id: 1
+      content: |
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <title>Ghosts and Spirits - <r:title /></title>
+        
+            <link href="/stylesheets/ghostsandspirits.css" media="screen" rel="Stylesheet" type="text/css" />
+            <link type="text/css" rel="Stylesheet" media="screen" href="/stylesheets/menu.css" />
+            <link type="text/css" rel="Stylesheet" media="screen" href="/stylesheets/song_menu.css" />
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+            <r:snippet name="rating_asset_includes" />
+        
+            <!--[if lt IE 7]>
+                <link href="/stylesheets/ghostsandspirits_ie6.css" media="screen" rel="Stylesheet" type="text/css" />        
+            <![endif]-->
+        
+            <r:snippet name="wimpy_head_stuff" />    
+        </head>
+        
+        <body>
+            <div id="center_of_window">
+                <r:snippet name="header" />
+                <div id="content">
+                    <div id="navbar_and_main_content">
+                        <div id="nav">
+                          <r:snippet name="navigation" />
+                        </div>
+                        <div id="main_content_area">
+                          <r:content_for_layout />
+                        </div>
+        
+                        <div id="footer">
+                            &copy; 2008-2009 Phil Woodward | <a href="mailto:phil@ghostsandspirits.net">Contact</a> | Valid <a href="http://validator.w3.org/check/referer">XHTML</a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
+
+    "2": 
+      updated_by_id: 1
+      name: album_song
+      created_at: 2009-11-26 07:38:27 Z
+      content_type: ""
+      updated_at: 2009-12-01 06:52:36 Z
+      created_by_id: 1
+      lock_version: 20
+      id: 2
+      content: |-
+        <r:set_vars wimpy="true" />
+        
+        <r:inside_layout name="master">
+        <div id="album_song">
+          <r:snippet name="song_header" other_parent_path="the-story" other_page_type="Story" />
+        
+          <r:snippet name="song_lyrics">
+            <r:content part="lyrics" />
+          </r:snippet>
+        
+          <r:snippet name="song_musicians">
+            <r:content part="musicians" />
+          </r:snippet>
+        
+          <r:if_content part="credits">
+            <r:content part="credits" />
+          </r:if_content>
+        
+          <r:unless_content part="credits">
+            <r:snippet name="song_credits" credits="Words and Music by Phil Woodward" />
+          </r:unless_content>
+        
+          <r:parent><r:snippet name="song_navigation" /></r:parent>
+        
+          <hr />
+        
+          <r:snippet name="rating" />
+          <r:snippet name="comments" />
+        </div>
+        </r:inside_layout>
+    "3": 
+      updated_by_id: 1
+      name: story_song
+      created_at: 2009-11-26 22:01:40 Z
+      content_type: ""
+      updated_at: 2009-12-02 18:13:24 Z
+      created_by_id: 1
+      lock_version: 5
+      id: 3
+      content: |-
+        <r:inside_layout name="master">
+          <div id="story_song">
+            <r:snippet name="song_header" other_parent_path="the-album" other_page_type="Album" />
+        
+            <div class="large_first_letter">
+              <r:content part="book_excerpt" />
+            </div>
+        
+            <r:parent><r:snippet name="song_navigation" /></r:parent>
+            <r:snippet name="comments" />
+          </div>
+        </r:inside_layout>
+  PageParts: 
+    "44": 
+      name: musicians
+      filter_id: ""
+      page_id: 18
+      id: 44
+      content: |-
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Mark Noguchi" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Piano" />
+        <r:snippet name="song_musician" musician="Chris Kennedy" instrument="Drums" />
+        <r:snippet name="song_musician" musician="Ann Edwards" instrument="Backup Vocals" />
+    "6": 
+      name: extended
+      filter_id: ""
+      page_id: 3
+      id: 6
+      content: ""
+    "33": 
+      name: credits
+      filter_id: ""
+      page_id: 12
+      id: 33
+      content: <r:snippet name="song_credits" credits="Words by Phil Woodward<br />Music by Myron Marston" />
+    "55": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 28
+      id: 55
+      content: "\xE2\x80\x9CI\xE2\x80\x99m afraid the first step is a hard one,\xE2\x80\x9D said the Spirit. \xE2\x80\x9CBut after that you\xE2\x80\x99ll go on like a house on fire. You will become solid enough for Michael to perceive you when you learn to want Someone Else besides Michael. I don\xE2\x80\x99t say \xE2\x80\x98more than Michael\xE2\x80\x99, not as a beginning. That will come later. It\xE2\x80\x99s only the little germ of a desire for God that we need to start the process.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CYou wouldn\xE2\x80\x99t talk like that if you were a mother.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CYou mean, if I were only a mother. But there is no such thing as being only a mother. You exist as Michael\xE2\x80\x99s mother only because you first existed as God\xE2\x80\x99s creature. That relation is older and closer. No, listen, Pam! He also loves. He also has suffered. He also has waited a long time.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CThis is all nonsense\xE2\x80\x94cruel and wicked nonsense. What right have you to say things like that about Mother-love? It is the highest and holiest feeling in human nature.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CPam, Pam\xE2\x80\x94no natural feelings are high or low, holy or unholy, in themselves. They are all holy when God\xE2\x80\x99s hand is on the rein. They all go bad when they set up on their own and make themselves into false gods.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CI don\xE2\x80\x99t care about all your rules and regulations. I don\xE2\x80\x99t believe in a God who keeps mother and son apart. I believe in a God of love. No one had a right to come between me and my son. Not even God. Tell Him that to His face. I want my boy, and I mean to have him. He is mine, do you understand? Mine, mine, mine, for ever and ever.\xE2\x80\x9D"
+    "11": 
+      name: body
+      filter_id: Textile
+      page_id: 6
+      id: 11
+      content: "* \"Phantom Tollbooth Review\":http://www.tollbooth.org/2008/reviews/philwoodward.html: \"In between studies [Woodward] has managed to record, with some substantial help, an absolutely magnificent album...his style is all his own and an excellent style it is indeed. This is one album that lovers of good rock n roll and great lyrical content need to add to their collection immediately.\"\r\n\
+        * \"Knot on a Blog Review\":http://knotonablog.blogspot.com/2009/01/ghosts-and-spirits-review.html: \"If you love great, thoughtful music \xE2\x80\x93 that can be listened to again and again without ever wearing out it's welcome \xE2\x80\x93 then please give Ghosts and Spirits a chance. This is the kind of album that deserves to be heard by a much wider audience. It just gets better with each listen.\"\r\n\
+        * \"Internet Monk Radio Podcast #73\":http://www.internetmonk.com/archive/internet-monk-radio-podcast-73: \"This is a concept album based on C.S. Lewis's book _The Great Divorce_, and it is really good.  You're obviously taking on a pretty substantial challenge to take a theological and imaginative and literary work like _The Great Divorce_ and try to turn it into a concept record, and maybe it's a little bit 70's of me to be attracted to that kind of music.  But if you like progressive rock, this is of the lighter variety.  [It's] very eclectic--a lot of different kinds of songs, a lot of different kinds of instruments.  The songs really do capture the characters and the chapters and the feel of Lewis's book...and you will like it even if you don't like C.S. Lewis's _The Great Divorce_.\"\r\n\
+        * \"Hope and American Culture\":http://www.spu.edu/depts/uc/response/spring2k8/features/hope-in-american-culture.asp from Seattle Pacific University's \"Response\":http://www.spu.edu/depts/uc/response/ Magazine\r\n\
+        * \"Esse Quam Videri Review\":http://undegaussable.blogspot.com/2008/07/review-ghosts-and-spirits.html\r\n\
+        * \"The Growlery Review\":http://mygrowlery.blogspot.com/2008/03/ghosts-and-grad-school.html\r\n\
+        \r\n\
+        Do you write for a blog or publication? Want a free copy of the CD? If you'd like to write up a review, \"contact Phil\":mailto:phil@ghostsandspirits.net and he would be glad to mail you a copy."
+    "45": 
+      name: musicians
+      filter_id: ""
+      page_id: 19
+      id: 45
+      content: |-
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Mark Noguchi" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Keyboard" />
+        <r:snippet name="song_musician" musician="Chris Kennedy" instrument="Drums" />
+        <r:snippet name="song_musician" musician="Lacey Brown" instrument="Vibraphone" />
+        <r:snippet name="song_musician" musician="J.J. Jang" instrument="Violin" />
+        <r:snippet name="song_musician" musician="Rosemary Townsend" instrument="Violin" />
+        <r:snippet name="song_musician" musician="Lisa Kallberg" instrument="Viola" />
+        <r:snippet name="song_musician" musician="Phillip Peterson" instrument="Cello" />
+        <r:snippet name="song_musician" musician="Matt Bollinger" instrument="Backup Vocals" />
+    "23": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 11
+      id: 23
+      content: "I only ever asked\r\n\
+        To be paid for my tasks\r\n\
+        Just to get from the world what I know I\xE2\x80\x99m due\r\n\
+        I made my share of mistakes\r\n\
+        But for heaven\xE2\x80\x99s sakes\r\n\
+        I only did my best, and I made it through\r\n\
+        If I get your tone\r\n\
+        You want me to disown\r\n\
+        The life I\xE2\x80\x99ve lived, and trade it for something free\r\n\
+        But I\xE2\x80\x99m not ashamed\r\n\
+        Of the choices I\xE2\x80\x99ve made\r\n\
+        And I\xE2\x80\x99m not about to take your bleeding charity\r\n\
+        \r\n\
+        _Can\xE2\x80\x99t you see that I\xE2\x80\x99m only human?_\r\n\
+        &nbsp;&nbsp;&nbsp;&nbsp;Not a saint or an angel, I\xE2\x80\x99m just a man\r\n\
+        _Can\xE2\x80\x99t you see that I\xE2\x80\x99m only human?_\r\n\
+        &nbsp;&nbsp;&nbsp;&nbsp;And I\xE2\x80\x99m offended at what you\xE2\x80\x99re asking of me\r\n\
+        _Can\xE2\x80\x99t you see that I\xE2\x80\x99m only human?_\r\n\
+        &nbsp;&nbsp;&nbsp;&nbsp;But of my little world, I\xE2\x80\x99m always in command\r\n\
+        _Can\xE2\x80\x99t you see that I\xE2\x80\x99m only human?_\r\n\
+        &nbsp;&nbsp;&nbsp;&nbsp;I can work for my pay; I don\xE2\x80\x99t take nothing for free\r\n\
+        \r\n\
+        Friend, I know your pain\r\n\
+        Once, I felt the same\r\n\
+        Heaven knows I only did what I thought was just\r\n\
+        But please, save your breath\r\n\
+        \xE2\x80\x99Cause it\xE2\x80\x99s reaking of death\r\n\
+        If you haven\xE2\x80\x99t noticed, you\xE2\x80\x99ll just have to trust\r\n\
+        You want justice served\r\n\
+        To get what you deserve\r\n\
+        But you\xE2\x80\x99ll do better than that, if you come with me\r\n\
+        So give up yourself\r\n\
+        And receive the wealth\r\n\
+        That\xE2\x80\x99s yours for free through the Bleeding Charity\r\n\
+        \r\n\
+        _Can\xE2\x80\x99t you see that I\xE2\x80\x99m only human?_\r\n\
+        &nbsp;&nbsp;&nbsp;&nbsp;Not a God or an angel, I\xE2\x80\x99m just a man\r\n\
+        _Can\xE2\x80\x99t you see that I\xE2\x80\x99m only human?_\r\n\
+        &nbsp;&nbsp;&nbsp;&nbsp;Just freed from accident and fallacy\r\n\
+        _Can\xE2\x80\x99t you see that I\xE2\x80\x99m only human?_\r\n\
+        &nbsp;&nbsp;&nbsp;&nbsp;When I gave up myself, that\xE2\x80\x99s when it all began\r\n\
+        _Can\xE2\x80\x99t you see that I\xE2\x80\x99m only human?_\r\n\
+        &nbsp;&nbsp;&nbsp;&nbsp;Nothing more or less than all I\xE2\x80\x99m meant to be\r\n\
+        \r\n\
+        So sing your song here\r\n\
+        Something\xE2\x80\x99s wrong here\r\n\
+        I can tell that I don\xE2\x80\x99t belong here\r\n\
+        It\xE2\x80\x99s inviting\r\n\
+        But I\xE2\x80\x99m deciding\r\n\
+        I don\xE2\x80\x99t want it until it\xE2\x80\x99s in writing\r\n\
+        I\xE2\x80\x99m a sinner\r\n\
+        But I\xE2\x80\x99m the winner\r\n\
+        In this business you\xE2\x80\x99re the beginner\r\n\
+        I sure ran good\r\n\
+        For my own damn good\r\n\
+        Unlike you, I\xE2\x80\x99ve still got my manhood"
+    "12": 
+      name: extended
+      filter_id: ""
+      page_id: 6
+      id: 12
+      content: ""
+    "34": 
+      name: credits
+      filter_id: ""
+      page_id: 16
+      id: 34
+      content: <r:snippet name="song_credits" credits="Words and Music by Phil Woodward<br />Cello arrangement by Phillip Peterson" />
+    "56": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 29
+      id: 56
+      content: "Part I \r\n\
+        \r\n\
+        I saw coming towards us a Ghost who carried on his shoulder was a little red lizard, and it was twitching its tail like a whip and whispering things in his ear. As we caught sight of him he turned his head to the reptile with a snarl of impatience. \xE2\x80\x9CShut up, I tell you!\xE2\x80\x9D he said. It wagged its tail and continued to whisper to him. He ceased snarling, and presently began to smile. Then he turned and started to limp westward, away from the mountains. \r\n\
+        \r\n\
+        \xE2\x80\x9COff so soon?\xE2\x80\x9D said a voice. \r\n\
+        \r\n\
+        \xE2\x80\x9CYes. I\xE2\x80\x99m off,\xE2\x80\x9D said the Ghost. \xE2\x80\x9CThanks for all your hospitality. But it\xE2\x80\x99s no good, you see. I told this little chap\xE2\x80\x9D (here he indicated the Lizard) \xE2\x80\x9Cthat he\xE2\x80\x99d have to be quiet if he came\xE2\x80\x94which he insisted on doing. Of course his stuff won\xE2\x80\x99t do here: I realise that. But he won\xE2\x80\x99t stop. I shall just have to go home.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CWould you like me to make him quiet?\xE2\x80\x9D said the flaming Spirit\xE2\x80\x94an angel, as I now understood. \r\n\
+        \r\n\
+        \xE2\x80\x9COf course I would,\xE2\x80\x9D said the Ghost. \r\n\
+        \r\n\
+        \xE2\x80\x9CThen I shall kill him,\xE2\x80\x9D said the Angel, taking a step forward. \xE2\x80\x9CHave I your permission?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CI know it will kill me.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CIt won\xE2\x80\x99t. But supposing it did?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CYou\xE2\x80\x99re right. It would be better to be dead that to live with this creature.\xE2\x80\x9D \r\n\
+        \r\n\
+        Next moment the Ghost gave a scream of agony such as I never heard on Earth. The Burning One closed his crimson grip on the reptile: twisted it, while it bit and writhed, and then flung it, broke-backed on the turf. \r\n\
+        \r\n\
+        \r\n\
+        Part II \r\n\
+        \r\n\
+        At first I thought the operation had failed. So far from dying, the creature was still struggling and even growing bigger as it struggled. And as it grew it changed. Its hinder parts grew rounder. The tail, still flickering, became a tail of hair that flickered between huge and glossy buttocks. Suddenly I started back, rubbing my eyes. What stood before me was the greatest stallion I have ever seen, silvery white but with mane and tail of gold. It was smooth and shining, rippled with swells of flesh and muscle, whinnying and stamping with its hoofs. At each stamp the land shook and the trees dindled. \r\n\
+        \r\n\
+        The new-made man turned and clapped the new horse\xE2\x80\x99s neck. It nosed his bright body. Horse and master breathed each into the other\xE2\x80\x99s nostrils. The man turned from it, flung himself at the feet of the Burning One, and embraced them. In joyous haste the young man leaped upon the horse\xE2\x80\x99s back. Turning in his eat he waved farewell, then nudged the stallion with his heels. They were off before I knew well what was happening. There was riding if you like! I came out as quickly as I could from among the bushes to follow them with my eyes; but already they were only like a shooting star far off on the green plain, and soon among the foothills of the mountains. Then, still like a star, I saw them winding up, scaling what seemed impossible steeps, and quicker every moment, till near the dim brow of the landscape, so high that I must strain my neck to see them, they vanished, bright themselves, into the rose-brightness of that everlasting morning. "
+    "7": 
+      name: body
+      filter_id: Textile
+      page_id: 4
+      id: 7
+      content: "\xE2\x80\x9CEven supposing a man of unholy life were suffered to enter heaven, he would not be happy there; so that it would be no mercy to permit him to enter.\xE2\x80\x9D C.S. Lewis\xE2\x80\x99s work _The Great Divorce_ is something of an extended narrative reflection on these words by John Henry Cardinal Newman.\r\n\
+        \r\n\
+        The story is told by a Narrator we come to know as a characterization of Lewis himself. At the opening, he finds himself in a seemingly endless, dreary town hazily draped in a \xE2\x80\x9Cgreasy rain.\xE2\x80\x9D Locals are gathering at a bus stop, and the Narrator boards with them. The bus travels (aerially) to a strikingly different locale, \xE2\x80\x9Ca level, grassy country through which there ran a wide river\xE2\x80\x9D with mountains visible in the distance. When Lewis disembarks, he finds discovers that the grass is sharp on his feet and that his body is translucent: he and his company from the Grey Town appear insubstantial, ghost-like, compared with the firmer reality of the heavenly country.\r\n\
+        \r\n\
+        The narrative progresses as a series of dialogues the Narrator either observes or participates in. The interlocutors are ghosts form the Grey Town and spirits from the heavenly country. The ghosts find the new environment and its inhabitants frightening, disturbing, even offensive. Few stay.\r\n\
+        \r\n\
+        The story contains obvious parallels to Dante\xE2\x80\x99s _The Divine Comedy_: the disoriented opening in medias res, the ascent from infernal to celestial locales, the presence of a teacher or guide, reference to purgative processes, notions of the alteration of memory of evil (\xC3\xA0 la the river Lethe), and even explicit reference to Beatrice. And like Dante\xE2\x80\x99s work, _The Great Divorce_ poses a difficult exegetical problem: to what extent is it meant as a theology of the afterlife, and to what extent is it a reflection on the depths and heights of life as we know it?\r\n\
+        \r\n\
+        Clearly, there is an eschatological message in _The Great Divorce_: hell is chosen by its inhabitants. But Lewis stops short of saying much else about the details of the afterlife. The abrupt ending tells us that the journey has all been an allegorical dream, after all. In the final counting, the narrative focuses not on abstractions about postmortem survival, but on the unique individuals encountered by the Narrator\xE2\x80\x94their \xE2\x80\x9Cfight against joy\xE2\x80\x9D or their embrace of it, their acceptance or rejection of grace. The work\xE2\x80\x99s power is in its illuminating religious psychology. Countless good reasons there may be for modern and postmodern people to eschew traditional religious devotion. This story is all about the bad reasons.\r\n\
+        \r\n\
+        Use the song navigation menu below to visit pages containing excerpts from _The Great Divorce_ related to each song.\r\n\
+        \r\n\
+        <r:snippet name=\"song_navigation\" />"
+    "46": 
+      name: musicians
+      filter_id: ""
+      page_id: 20
+      id: 46
+      content: |-
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Mark Noguchi" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Keyboard" />
+        <r:snippet name="song_musician" musician="Chris Kennedy" instrument="Drums" />
+        <r:snippet name="song_musician" musician="Marylin Marsh" instrument="Pipe Organ" />
+        <r:snippet name="song_musician" musician="Pete Day, Gary Owen, Gwen Owen, Kirsten Lysen, Lacey Brown, Sarah Moore" instrument="Choir" />
+    "24": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 12
+      id: 24
+      content: "Thank God (in an abstract sense) that we\xE2\x80\x99ve\r\n\
+        Mustered up the courage to leave\r\n\
+        The battered ranks of the na\xC3\xAFve.\r\n\
+        \r\n\
+        Remember that angst, that earnestness,\r\n\
+        That intellectual distress,\r\n\
+        That accompanied our youthfulness?\r\n\
+        \r\n\
+        My friends, \xE2\x80\x99tis clearly a priori\r\n\
+        That cultures espouse a meta-story\r\n\
+        A veritable intellectual quarry\r\n\
+        \r\n\
+        From which they draw their sense of shame,\r\n\
+        Their paradigmatic value claims,\r\n\
+        And their institutes of praise and blame.\r\n\
+        \r\n\
+        But we, the academic heroes, rise\r\n\
+        Above their existential cries\r\n\
+        For we need no answers to be wise:\r\n\
+        \r\n\
+        For wisdom lies neither in value nor fact,\r\n\
+        But in modesty, honesty, courage, and tact\r\n\
+        And in confessing what our academies have lacked,\r\n\
+        \r\n\
+        Their myopic, close-minded approach to thought,\r\n\
+        All the unnecessary battles they\xE2\x80\x99ve fought,\r\n\
+        And their delightfully one-sided concept of God.\r\n\
+        \r\n\
+        So, tirelessly toil we, on their behalf\r\n\
+        And rejoice in the day when they give even half\r\n\
+        Of the heart we so nobly put into our craft.\r\n\
+        \r\n\
+        And together we\xE2\x80\x99ll stand, amidst a whole host\r\n\
+        Of trivial drivel, and raise high a toast\r\n\
+        To the death of the things that matter the most."
+    "8": 
+      name: extended
+      filter_id: ""
+      page_id: 4
+      id: 8
+      content: ""
+    "35": 
+      name: credits
+      filter_id: ""
+      page_id: 19
+      id: 35
+      content: <r:snippet name="song_credits" credits="Words and Music by Phil Woodward<br />String arrangement by Myron Marston" />
+    "57": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 30
+      id: 57
+      content: "Some kind of procession was approaching us, and the light came from the persons who composed it. First came bright Spirits, not the Spirits of men, who danced and scattered flowers. Then, on the left and right, at each side of the forest avenue, came youthful shapes, boys upon one hand, and girls upon the other. If I could remember their singing and write down the notes, no man who read that score would ever grow sick or old. Between them went musicians: and after these a lady in whose honour all this was being done. \r\n\
+        \r\n\
+        \xE2\x80\x9CIs it?...is it?\xE2\x80\x9D I whispered to my guide. \r\n\
+        \r\n\
+        \xE2\x80\x9CNot at all,\xE2\x80\x9D said he. \xE2\x80\x9CIt\xE2\x80\x99s someone ye\xE2\x80\x99ll never have heard of. Her name on Earth was Sarah Smith and she lived at Golders Green.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CShe seems to be\xE2\x80\xA6well, a person of particular importance?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CAye. She is one of the great ones. Ye have heard that fame in this country and fame on Earth are two quite different things. Redeemed humanity is still young, it has hardly come to its full strength. But already there is joy enough in the little finger of a great saint such as yonder lady to waken all the dead things of the universe into life.\xE2\x80\x9D "
+    "13": 
+      name: body
+      filter_id: Textile
+      page_id: 7
+      id: 13
+      content: |-
+        _Ghosts and Spirits_ is available from several online retailers.
+        
+        The CD can be ordered from "CD Baby":http://cdbaby.com/cd/philwoodward.
+        
+        The album can also be downloaded from:
+        * "Amazon":http://www.amazon.com/Ghosts-and-Spirits/dp/B00197PK94/ref=sr_f3_1?ie=UTF8&s=dmusic&qid=1211711163&sr=103-1
+        * "CD Baby":http://cdbaby.com/cd/philwoodward
+        * "iTunes":http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=264516469&s=143441
+    "25": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 13
+      id: 25
+      content: "Locked in lengthy battle, heaven vs. hell\r\n\
+        But when did the angels last wage a fight?\r\n\
+        Could it be they find some pleasure in our weary plight?\r\n\
+        Or is it that the epic is a better sell?\r\n\
+        The royalties run out once the story ends\r\n\
+        So they stretch it out like a Dickens tale, and just as dense\r\n\
+        \r\n\
+        If good is meant to win, then I suppose it will\r\n\
+        But the meantime just feels like a cruel joke\r\n\
+        Just trial after trial for the common folk\r\n\
+        Frozen in the predawn, the air is still\r\n\
+        And suppose daybreak brings with it morning rains\r\n\
+        The apocalypse will just mean more aches and pains\r\n\
+        \r\n\
+        _I am done asking where_\r\n\
+        _I go when I die_\r\n\
+        _Or crying no fair_\r\n\
+        _I am weary of prayer_\r\n\
+        _So I\xE2\x80\x99ll trust in a sigh_\r\n\
+        _And I don\xE2\x80\x99t really care_\r\n\
+        \r\n\
+        Call me a cynic or a pessimist\r\n\
+        I\xE2\x80\x99d just say that I\xE2\x80\x99ve been around enough\r\n\
+        To see through their promises and call their bluff\r\n\
+        I think I\xE2\x80\x99ll be quite content to just exist\r\n\
+        I don\xE2\x80\x99t suppose it matters much which way you choose\r\n\
+        \xE2\x80\x98Cause either way it\xE2\x80\x99s heads I win or tails you lose"
+    "14": 
+      name: extended
+      filter_id: ""
+      page_id: 7
+      id: 14
+      content: ""
+    "36": 
+      name: credits
+      filter_id: ""
+      page_id: 20
+      id: 36
+      content: <r:snippet name="song_credits" credits="Words and Music by Phil Woodward<br />Organ arrangement by Nate Woodward" />
+    "47": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 10
+      id: 47
+      content: "\xE2\x80\x9CIt seems the deuce of a town,\xE2\x80\x9D I volunteered, \xE2\x80\x9Cand that\xE2\x80\x99s what I can\xE2\x80\x99t understand. The parts of it that I saw were so empty. Was there once a much larger population?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CNot at all,\xE2\x80\x9D said my neighbor. \xE2\x80\x9CThe trouble is that they\xE2\x80\x99re so quarrelsome. As soon as anyone arrives he settles in some street. Before he\xE2\x80\x99s been there twenty-four hours he quarrels with his neighbour. Before the week is over he\xE2\x80\x99s quarreled so badly that he decides to move. Very likely he finds the next street empty because all the people there have quarreled with their neighbours\xE2\x80\x94and moved. If so he settles in. If by any chance the street is full, he goes further. But even if he stays, it makes no odds. He\xE2\x80\x99s sure to have another quarrel pretty soon and then he\xE2\x80\x99ll move on again. Finally he\xE2\x80\x99ll move right out to the edge of the town and build a new house. You see, it\xE2\x80\x99s easy here. You\xE2\x80\x99ve only got to think a house and there it is. That\xE2\x80\x99s how the town keeps on growing.\xE2\x80\x9D\r\n\
+        \r\n\
+        <hr />\r\n\
+        \r\n\
+        \xE2\x80\x9CYou became rather narrow-minded towards the end of your life: but no doubt you\xE2\x80\x99ve broadened out again. Why, my dear boy, you were coming to believe in a literal Heaven and Hell!\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CBut wasn\xE2\x80\x99t I right? Where do you imagine you\xE2\x80\x99ve been?\xE2\x80\x99 \r\n\
+        \r\n\
+        \xE2\x80\x9CAh, I see, You mean that the grey town with its continual hope of morning (we must all live by hope, must we not?), with its field for indefinite progress, is, in some sense, Heaven, if only we have eyes to see it? That is a beautiful idea.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CI didn\xE2\x80\x99t mean that at all. Is it possible you don\xE2\x80\x99t know where you\xE2\x80\x99ve been?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CNow that you mention it, I don\xE2\x80\x99t think we ever do give it a name. What do you call it?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CWe call it Hell.\xE2\x80\x9D "
+    "9": 
+      name: body
+      filter_id: Textile
+      page_id: 5
+      id: 9
+      content: "Phil Woodward, songwriter and the creative force behind <i>Ghosts and Spirits</i>, grew up in Seattle, Washington. He was trained as a vocalist and composer, having studied music in the Northwest Boychoir and at Seattle Pacific University. He has been writing and arranging music ever since he can remember. In 2001, Phil formed Phileas Fogg. The band released a demo and an \"EP\":http://cdbaby.com/cd/phileasfogg during their time together.\r\n\
+        \r\n\
+        Phil\xE2\x80\x99s music strikes an uncommon blend of harmonic complexity, poetic/philosophical lyrics, and emotional expressiveness. It has been described as transporting, reflective, multi-layered, subtle, and dynamic. Among his influences, Phil lists \"Sufjan Stevens\":http://asthmatickitty.com/musicians.php?artistID=5, \"Radiohead\":http://www.radiohead.com, \"Coldplay\":http://www.coldplay.com/, \"Death Cab for Cutie\":http://www.deathcabforcutie.com/, \"Suzanne Vega\":http://www.suzannevega.com/, and \"Sigur R\xC3\xB3s\":http://www.sigur-ros.co.uk/. \r\n\
+        \r\n\
+        In 2004, Phil began to write songs for a concept album based on C.S. Lewis's work <i>The Great Divorce</i>. The final product, <i>Ghosts and Spirits</i>, took the better part of three years to complete. The band began to disperse in the midst of the project\xE2\x80\x94Myron Marston to China, Mark Noguchi to Los Angeles. While the project was clearly collaborative (with extensive help from the remaining Phileas Fogg members Chris Kennedy and Bobby Jacky, among many others), it became clear that it would outlive the band. Phil released the album under his own name.\r\n\
+        \r\n\
+        In 2006, Phil married Seattle singer/songwriter \"Lacey Brown\":http://www.laceybrown.com/. He is now pursuing a PhD in Philosophy at Indiana University.\r\n"
+    "37": 
+      name: musicians
+      filter_id: ""
+      page_id: 11
+      id: 37
+      content: |-
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Mark Noguchi" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Keyboard" />
+        <r:snippet name="song_musician" musician="Chris Kennedy" instrument="Drums" />
+        <r:snippet name="song_musician" musician="Lacey Brown" instrument="Percussion" />
+        <r:snippet name="song_musician" musician="Ann Edwards" instrument="Backup Vocals" />
+    "26": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 14
+      id: 26
+      content: "We were born for infinite happiness\r\n\
+        Yeah, we\xE2\x80\x99re children of the sun\r\n\
+        Yet we run and hide\r\n\
+        From the piercing morning light\r\n\
+        We\xE2\x80\x99re always on the run\r\n\
+        \r\n\
+        Come awake, desire for the greater good\r\n\
+        \xE2\x80\x99Cause we\xE2\x80\x99ve been way off course\r\n\
+        Like a child who stays\r\n\
+        On perfect sunny days\r\n\
+        Locked at play indoors\r\n\
+        \r\n\
+        _Feel the light of Eden_\r\n\
+        _In this long repose_\r\n\
+        _Make friends out of your foes_\r\n\
+        _You will learn to need them_\r\n\
+        _In this deep respite_\r\n\
+        _Every wrong will be made right_\r\n\
+        _And angels made from demons_\r\n\
+        _Let time redress_\r\n\
+        _All the madness, the muck, and the mess_\r\n\
+        \r\n\
+        And the past becomes a reverse mirage\r\n\
+        Never what it seems\r\n\
+        What was desert sand\r\n\
+        There\xE2\x80\x99s none of it that can\xE2\x80\x99t\r\n\
+        Break forth in flowing streams\r\n\
+        \r\n\
+        So come, my brothers and sisters, come\r\n\
+        It\xE2\x80\x99s time to end the fast\r\n\
+        Come and dine with me\r\n\
+        Drink the milk and honey\r\n\
+        The feast begins at last\r\n\
+        \r\n\
+        _Feel the light of Eden_\r\n\
+        _In this long repose_\r\n\
+        _Make friends out of your foes_\r\n\
+        _You will learn to need them_\r\n\
+        _In this deep respite_\r\n\
+        _Every wrong will be made right_\r\n\
+        _And angels made from demons_\r\n\
+        _Let time redress_\r\n\
+        _All the madness, the muck, and the mess_\r\n\
+        \r\n\
+        Well, they say that life is a paradise\r\n\
+        For those with eyes to see\r\n\
+        Every single soul\r\n\
+        That\xE2\x80\x99s longing to be whole\r\n\
+        Will find eternity"
+    "60": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 33
+      id: 60
+      content: "A fern turned golden. The eastern side of every tree-trunk grew bright. Shadows deepened. All the time there had been bird noises, trillings, chatterings, and the like; but now suddenly the full chorus was poured from every branch; cocks were crowing, there was music of hounds, and horns; above all this ten thousand tongues of men and woodland angels and the wood itself sang. \xE2\x80\x9CIt comes, it comes!\xE2\x80\x9D they sang. \xE2\x80\x9CSleepers awake! It comes, it comes it comes.\xE2\x80\x9D One dreadful glance over my shoulder I essayed\xE2\x80\x94not long enough to see (or did I see?) the rim of the sunrise that shoots Time dead with golden arrows and puts to flight all phantasmal shapes."
+    "59": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 32
+      id: 59
+      content: "\xE2\x80\x9CWhat some people say on Earth is that the final loss of one soul gives the lie to all the joy of those who are saved.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CYe see it does not.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CI feel in a way that it ought to.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CThat sounds very merciful: but see what lurks behind it.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CWhat?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CThe demand of the loveless and the self-imprisoned that they should be allowed to blackmail the universe: that till they consent to be happy (on their own terms): no one else shall taste joy: that theirs should be the final power; that Hell should be able to _veto_ Heaven.\xE2\x80\x9D"
+    "38": 
+      name: musicians
+      filter_id: ""
+      page_id: 12
+      id: 38
+      content: |-
+        <r:snippet name="song_musician" musician="George Scranton" instrument="Spoken Word" />
+        <r:snippet name="song_musician" musician="J.J. Jang" instrument="Violin" />
+        <r:snippet name="song_musician" musician="Rosemary Townsend" instrument="Violin" />
+        <r:snippet name="song_musician" musician="Lisa Kallberg" instrument="Viola" />
+        <r:snippet name="song_musician" musician="Phillip Peterson" instrument="Cello" />
+    "27": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 15
+      id: 27
+      content: "The artistic network\r\n\
+        Everyone\xE2\x80\x99s best work\r\n\
+        Friendly competition\r\n\
+        Whispers of suspicion\r\n\
+        Stylistic defection\r\n\
+        The critics\xE2\x80\x99 rejection\r\n\
+        Then after they shame us\r\n\
+        They finally make us famous\r\n\
+        \r\n\
+        It started when the light\r\n\
+        Was dancing through the pines\r\n\
+        It started when the junipers reached their full height\r\n\
+        It started when each day\r\n\
+        Would take my breath away\r\n\
+        \r\n\
+        Now I can\xE2\x80\x99t paint\r\n\
+        Without thinking of those I hate\r\n\
+        \r\n\
+        _I think I\xE2\x80\x99ve lost my first love_\r\n\
+        _I lost my first love_\r\n\
+        \r\n\
+        The hard decision\r\n\
+        The teaching position\r\n\
+        Lengthy manifestos\r\n\
+        About medieval frescoes\r\n\
+        Successful students\r\n\
+        All the accoutrements\r\n\
+        Then they all start scoffing\r\n\
+        When they see what the New School\xE2\x80\x99s offering\r\n\
+        \r\n\
+        I remember when\r\n\
+        The ravens and the wrens\r\n\
+        Would dance and dive and dart and make my head spin\r\n\
+        No brushstroke in the world\r\n\
+        Could capture how they swirled\r\n\
+        \r\n\
+        Now all I express\r\n\
+        Depicts what I detest\r\n\
+        \r\n\
+        _I think I\xE2\x80\x99ve lost my first love_\r\n\
+        _I lost my first love_\r\n\
+        \r\n\
+        What good is heaven if you\xE2\x80\x99re not allowed to paint it?\r\n\
+        What good is paint if you\xE2\x80\x99ve always gotta fake it?\r\n\
+        What good\xE2\x80\x99s a fake when the world\xE2\x80\x99s already moved on?\r\n\
+        And why move on when they\xE2\x80\x99ll make you leave heaven behind?"
+    "50": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 23
+      id: 50
+      content: "\xE2\x80\x9CWhat I\xE2\x80\x99d like to understand,\xE2\x80\x9D said the Ghost, \xE2\x80\x9Cis what you\xE2\x80\x99re here for, as pleased as Punch, you, a bloody murderer, while I\xE2\x80\x99ve been walking the streets down there and living in a place like a pigstye all these years. Look at me, now. I gone straight all my life. I don\xE2\x80\x99t say I was a religious man and I don\xE2\x80\x99t say I had no faults, far from it. But I done my best all my life, see? I done my best by everyone, that\xE2\x80\x99s the sort of chap I was. I never asked for anything that wasn\xE2\x80\x99t mine by rights. If I wanted a drink I paid for it and if I took my wages I done my job, see? That\xE2\x80\x99s the sort I was and I don\xE2\x80\x99t care who knows it. You may think you can put me down because you\xE2\x80\x99re dressed up like that (which you weren\xE2\x80\x99t when you worked under me) and I\xE2\x80\x99m only a poor man. But I got to have my rights same as you, see?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9COh no. It\xE2\x80\x99s not so bad as that. I haven\xE2\x80\x99t got my rights, or I should not be here. You will not get yours either. You\xE2\x80\x99ll get something far better. Never fear.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CWhat do you keep on arguing for? I\xE2\x80\x99m only telling you the sort of chap I am. I only want my rights. I\xE2\x80\x99m not asking for anybody\xE2\x80\x99s bleeding charity.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CThen do. At once. Ask for the Bleeding Charity. Everything is here for the asking and nothing can be bought.\xE2\x80\x9D "
+    "49": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 22
+      id: 49
+      content: "At last the top of the cliff became visible like a thin line of emerald green stretched tight as a fiddle-string. Presently we glided over that top: we were flying above a level, grassy country through which there ran a wide river. We were losing height now: some of the tallest tree tops were only twenty feet below us. Then, suddenly we were at rest. Everyone had jumped up. Curses, taunts, blows, a filth of vituperation, came to my ears as my fellow-passengers struggled to get out. A moment later, and they had all succeeded. I was alone in the bus, and through the open door there came to me in the fresh stillness the singing of a lark. \r\n\
+        \r\n\
+        At first, of course, my attention was caught by my fellow-passengers, who were still grouped about in the neighborhood of the omnibus, though beginning, some of them, to walk forward into the landscape with hesitating steps. I gasped when I saw them. Now that they were in the light, they were transparent\xE2\x80\x94fully transparent when they stood between me and it, smudgy and imperfectly opaque when they stood in the shadow of some tree. They were in fact ghosts: man-shaped stains on the brightness of that air. One could attend to them or ignore them at will as you do with the dirt on a window pane. I noticed that the grass did not bend under their feet: even the dew drops were not disturbed. \r\n\
+        \r\n\
+        Then some re-adjustment of the mind or some focusing of my eyes took place, and I saw the whole phenomenon the other way round. The men were as they had always been; as all the men I had known had been perhaps. It was the light, the grass, the trees that were different; made of some different substance, so much solider than things in our country that men were ghosts by comparison. \r\n\
+        \r\n\
+        \xE2\x80\x9CI don\xE2\x80\x99t like it! I don\xE2\x80\x99t like it,\xE2\x80\x9D screamed a voice. \xE2\x80\x9CIt gives me the pip!\xE2\x80\x9D One of the ghosts had darted past me, back into the bus. She never came out of it again as far as I know. \r\n\
+        \r\n\
+        The others remained, uncertain. "
+    "40": 
+      name: musicians
+      filter_id: ""
+      page_id: 14
+      id: 40
+      content: |
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Keyboard" />
+        <r:snippet name="song_musician" musician="Lacey Brown" instrument="Drums" />
+        <r:snippet name="song_musician" musician="Tony Rivera" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Gwen Owen" instrument="Backup Vocals" />
+        <r:snippet name="song_musician" musician="Kristian Swearingen" instrument="Violin" />
+
+    "39": 
+      name: musicians
+      filter_id: ""
+      page_id: 13
+      id: 39
+      content: |
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Accordian" />
+        <r:snippet name="song_musician" musician="Lacey Brown" instrument="Drums" />
+        <r:snippet name="song_musician" musician="Gwen Owen" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Ann Edwards" instrument="Backup Vocals" />
+
+    "28": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 16
+      id: 28
+      content: "All these long, dark years\r\n\
+        I have sat in silence\r\n\
+        I have harbored fears\r\n\
+        That I'd someday cry less\r\n\
+        But to my great relief\r\n\
+        The pain never subsided\r\n\
+        Now you say my grief\r\n\
+        Has always been misguided\r\n\
+        \r\n\
+        I never faked it\r\n\
+        Since the day his life\xE2\x80\x99s begun\r\n\
+        No love\xE2\x80\x99s so sacred\r\n\
+        As a mother\xE2\x80\x99s for her son\r\n\
+        \r\n\
+        I spent my energy\r\n\
+        In the hope that something\r\n\
+        Would let me someday see\r\n\
+        The one that God took from me\r\n\
+        Where\xE2\x80\x99s my only child?\r\n\
+        Tell him his room\xE2\x80\x99s still furnished\r\n\
+        Tell him I\xE2\x80\x99ve arrive\r\n\
+        I know he\xE2\x80\x99ll come in earnest\r\n\
+        \r\n\
+        You say another\r\n\
+        Needs first to have my heart\r\n\
+        But I\xE2\x80\x99m a mother\r\n\
+        I know where my duties start\r\n\
+        If he loved me\r\n\
+        He wouldn\xE2\x80\x99t take from me my joy\r\n\
+        If he\xE2\x80\x99s thinking of me\r\n\
+        He\xE2\x80\x99d let me see my boy\r\n\
+        \r\n\
+        I abhor your God\r\n\
+        And the wretch he\xE2\x80\x99s made me\r\n\
+        Tell me, has he not\r\n\
+        Been rather cruel lately\r\n\
+        I think he ought\r\n\
+        To want to heal my aching\r\n\
+        \xE2\x80\x98Cause all I really want\r\n\
+        Is to see my baby"
+    "17": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 8
+      id: 17
+      content: "It\xE2\x80\x99s good to see newcomers\r\n\
+        Enjoy our endless summers\r\n\
+        Albeit damp and dark and gray\r\n\
+        Here nothing ever changes\r\n\
+        It\xE2\x80\x99s been the same for ages\r\n\
+        We hope you all enjoy your stay\r\n\
+        No need for reservations\r\n\
+        If you desire accommodations\r\n\
+        Just dream them up: they\xE2\x80\x99re yours for free\r\n\
+        Feel free to settle near here\r\n\
+        But we doubt you will, \xE2\x80\x99cause we\xE2\x80\x99re here\r\n\
+        We suspect you\xE2\x80\x99ll want your privacy\r\n\
+        \r\n\
+        _If you open your eyes, you\xE2\x80\x99ll see it\xE2\x80\x99s heaven_\r\n\
+        \r\n\
+        Sure, it\xE2\x80\x99s always raining\r\n\
+        And everyone\xE2\x80\x99s complaining\r\n\
+        But some you win, and some you lose\r\n\
+        If you ever need a handful\r\n\
+        Of something insubstantial\r\n\
+        You can have anything you choose\r\n\
+        It\xE2\x80\x99s not that wounds are healing\r\n\
+        It\xE2\x80\x99s more that we\xE2\x80\x99ve stopped feeling\r\n\
+        \xE2\x80\x99Cause pain and pleasure we\xE2\x80\x99ve outgrown\r\n\
+        No need to fear disasters\r\n\
+        In a town where nothing matters\r\n\
+        So come and make yourself at home\r\n\
+        \r\n\
+        _If you open your eyes, you\xE2\x80\x99ll see it\xE2\x80\x99s heaven_\r\n\
+        \r\n\
+        If your neighbor has abused you\r\n\
+        It\xE2\x80\x99s not something to get used to\r\n\
+        Go to the center of the city\r\n\
+        Take it to the complaint committee\r\n\
+        If they like the way it sounds, you\xE2\x80\x99ll\r\n\
+        Get referred to the higher council\r\n\
+        First, have a chat with the chief official\r\n\
+        (An imposing individual)\r\n\
+        And if it\xE2\x80\x99s enough you\xE2\x80\x99ve paid her\r\n\
+        You will hear back six weeks later\r\n\
+        Their decision will take affect when\r\n\
+        They complete the triannual inspection\r\n\
+        But if you want to skip that process,\r\n\
+        Let it go, and cut your losses\r\n\
+        The solution\xE2\x80\x99s rather simple:\r\n\
+        Move to where there\xE2\x80\x99s no more people\r\n\
+        \r\n\
+        _If you open your eyes, you\xE2\x80\x99ll see it\xE2\x80\x99s heaven_"
+    "51": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 24
+      id: 51
+      content: "\xE2\x80\x9CFor me there is no such thing as a final answer. The free wind of inquiry must always continue to blow through the mind, must it not? \xE2\x80\x98Prove all things\xE2\x80\x99\xE2\x80\xA6to travel hopefully is better than to arrive.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CIf that were true, and known to be true, how could anyone travel hopefully? You think that, because hitherto you have experienced truth only with the abstract intellect. I will bring you where you can taste it like honey and be embraced by it as by a bridegroom. You thirst shall be quenched.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CWell, really, you know, I am not aware of a thirst for some ready-made truth which puts an end to intellectual activity in the way you seem to be describing. Will it leave me the free play of Mind, Dick? I must insist on that, you know.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CListen!\xE2\x80\x9D said the White Spirit. \xE2\x80\x9COnce you were a child. Once you knew what inquiry was for. There was a time when you asked questions because you wanted answers, and were glad when you had found them. Become that child again: even now.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CAh, but when I became a man I put away childish things.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CYou have gone far wrong. Thirst was made for water; inquiry for truth.\xE2\x80\x9D "
+    "1": 
+      name: body
+      filter_id: Textile
+      page_id: 1
+      id: 1
+      content: |-
+        <div id="home_content">
+        p(home_page_first_p). <span class="home_page_bracket">{</span> Phil Woodward <span class="home_page_bracket">}</span>
+        
+        !images/album_cover.jpg(Ghosts and Spirits Album Cover)!
+        
+        <span class="home_page_bracket">{</span> Ghosts and Spirits <span class="home_page_bracket">}</span>
+        </div>
+    "41": 
+      name: musicians
+      filter_id: ""
+      page_id: 15
+      id: 41
+      content: |
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Mark Noguchi" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Keyboard" />
+        <r:snippet name="song_musician" musician="Chris Kennedy" instrument="Drums" />
+        <r:snippet name="song_musician" musician="Lacey Brown" instrument="Backup Vocals" />
+
+    "18": 
+      name: musicians
+      filter_id: ""
+      page_id: 8
+      id: 18
+      content: |-
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Mark Noguchi" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Keyboard" />
+        <r:snippet name="song_musician" musician="Chris Kennedy" instrument="Drums" />
+        <r:snippet name="song_musician" musician="Gwen Owen, Matt Bollinger" instrument="Backup Vocals" />
+    "30": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 18
+      id: 30
+      content: "I saw it only for a single split-second\r\n\
+        But I saw it all the same\r\n\
+        I watched in wonder as the world\xE2\x80\x99s walls opened\r\n\
+        And my vision all was changed\r\n\
+        Description, via words and sounds and colors\r\n\
+        All this glory and grace defy\r\n\
+        Still I offer these, my feeble, frail phrases\r\n\
+        \xE2\x80\x99Cause I cannot help but try\r\n\
+        \r\n\
+        \r\n\
+        I watched as she walked through her yard in\r\n\
+        The rain and wind of an autumn afternoon\r\n\
+        She tended her little garden\r\n\
+        Fending off the coming of the winter\xE2\x80\x99s gloom\r\n\
+        \r\n\
+        I watched as the birds came and nested\r\n\
+        In the trees that she pruned and prepared for them\r\n\
+        And raccoons and dogs and cats all rested\r\n\
+        Under her eye as she fed and cared for them\r\n\
+        \r\n\
+        \r\n\
+        I watched as the neighborhood children\r\n\
+        Found in her the warmth that money never buys\r\n\
+        When they cried, she rocked and gently stilled them\r\n\
+        When they laughed, the twinkle came into her eyes\r\n\
+        \r\n\
+        On her watch, the bullies left their taunting\r\n\
+        And the timid learned to make new friends with ease\r\n\
+        When she sent them off, they went home wanting\r\n\
+        To share this love and grace with their families\r\n\
+        \r\n\
+        \r\n\
+        O, how she weeded out\r\n\
+        The lies that they\xE2\x80\x99d been told\r\n\
+        And warmed their hearts before they could grow cold\r\n\
+        \r\n\
+        \r\n\
+        I watched as the girls became women\r\n\
+        And the men moved on from their boyhood glow\r\n\
+        Still they came and poured out for a minute\r\n\
+        All the pains and pleasures they had come to know\r\n\
+        \r\n\
+        There were tensions now, and broken friendships\r\n\
+        Party lines and dogmas over which they fought\r\n\
+        Under her roof, they\xE2\x80\x99d start to mend rifts\r\n\
+        And find the sweet simplicity they always sought\r\n\
+        \r\n\
+        \r\n\
+        O, how she called to mind\r\n\
+        Their long-forgotten goals\r\n\
+        And when she spoke, she spoke into their souls\r\n\
+        \r\n\
+        \r\n\
+        Then all exploded into rapture\r\n\
+        And I saw the splendor of this mighty queen\r\n\
+        The darkness cowered at her laughter\r\n\
+        And her tears could shake all of the world unseen\r\n\
+        \r\n\
+        All evil spells and incantations\r\n\
+        Her simple love, they couldn\xE2\x80\x99t penetrate\r\n\
+        Her joy that rippled through the nations\r\n\
+        Brought low the proud, and made the crooked straight\r\n\
+        \r\n\
+        \r\n\
+        O, how each creature came\r\n\
+        To know its place as such\r\n\
+        Through the patient power of her touch\r\n\
+        \r\n\
+        O, how her quiet voice\r\n\
+        As angels sang along\r\n\
+        Summoned every silent stone to song\r\n\
+        \r\n\
+        O, how she beckons us\r\n\
+        To discover all we\xE2\x80\x99re worth\r\n\
+        And she calls to life the dead things of the earth\r\n\
+        \r\n\
+        \r\n\
+        I saw it only for a single split-second\r\n\
+        But I saw it all the same\r\n\
+        I watched in wonder as the world\xE2\x80\x99s walls opened\r\n\
+        And my vision all was changed"
+    "29": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 17
+      id: 29
+      content: "*Part I*\r\n\
+        \r\n\
+        I hate you and I love you, you filthy beast\r\n\
+        I pushed you and I shoved you, but your powers increased\r\n\
+        You sort out the enigma of how Adam fell\r\n\
+        And I bear you as a stigma, my scarlet L\r\n\
+        \r\n\
+        Sometimes I can defy you and make you behave\r\n\
+        Sometimes I justify you and become your slave\r\n\
+        I feel you on my shoulder, tugging on my sleeve\r\n\
+        Maybe someday when I\xE2\x80\x99m older you\xE2\x80\x99ll take your leave\r\n\
+        \r\n\
+        \r\n\
+        Thinking you a portent of recompense\r\n\
+        I followed you to torment and lost innocence\r\n\
+        But when I finally vowed further filth would cease\r\n\
+        Your proddings just grew louder and you cursed my peace\r\n\
+        \r\n\
+        So I conspired to kill you with a single attack\r\n\
+        But my weapons barely stilled you, and sank into my back\r\n\
+        Far from this procedure avenging my shame\r\n\
+        It left my every feature bloodied and maimed\r\n\
+        \r\n\
+        I bear the battle scars\r\n\
+        Wrought by my enemy\r\n\
+        But, monster that you are,\r\n\
+        You\xE2\x80\x99re just a part of me\r\n\
+        If this war ever ends\r\n\
+        I wonder if we could\r\n\
+        Then be friends\r\n\
+        \r\n\
+        How thin and weak you look\r\n\
+        You bear a heavy yoke\r\n\
+        Could it be that I mistook\r\n\
+        A child for a rogue\r\n\
+        If you were made to grow\r\n\
+        I wonder what you\xE2\x80\x99d be\r\n\
+        And where we\xE2\x80\x99d go\r\n\
+        \r\n\
+        \r\n\
+        I feel these fiery hands\r\n\
+        I surrender to the flame\r\n\
+        On the unlikely chance\r\n\
+        That they\xE2\x80\x99ll not miss their aim\r\n\
+        But even if my turn\r\n\
+        Has come to meet my end\r\n\
+        I choose to burn\r\n\
+        \r\n\
+        \r\n\
+        *Part II*\r\n\
+        \r\n\
+        Overcome us that, overcome, we may be ourselves\r\n\
+        Overrun us that, overrun, we may share your wealth\r\n\
+        Destroy the thrones and altar-stones we build for our own pride\r\n\
+        Bend our backs and break our bones, that we may learn to fly"
+    "2": 
+      name: extended
+      filter_id: ""
+      page_id: 1
+      id: 2
+      content: ""
+    "52": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 25
+      id: 52
+      content: "\xE2\x80\x9CWell, I don\xE2\x80\x99t see what all the talk is about,\xE2\x80\x99 said the Hard-Bitten Ghost. \xE2\x80\x98It\xE2\x80\x99s as good as any other park to look at, and darned uncomfortable.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CThere seems to be some idea that if one stays here one would get\xE2\x80\x94well, solider\xE2\x80\x94grow acclimatised.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CI know all about that,\xE2\x80\x99 said the Ghost. \xE2\x80\x98Same old lie. All this stuff up here is run by the same people as the Town. They\xE2\x80\x99re just laughing at us.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CI thought they were at war?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9COf course you did. That\xE2\x80\x99s the official version. But who\xE2\x80\x99s ever seen any signs of it? Oh, I know that\xE2\x80\x99s how they talk. But if there\xE2\x80\x99s a real war why don\xE2\x80\x99t they do anything? Don\xE2\x80\x99t you see that if the official version were true these chaps up here would attack and sweep the Town out of existence? They\xE2\x80\x99ve got the strength. If they wanted to rescue us they could do it. But obviously the last thing they want is to end their so-called \xE2\x80\x98war\xE2\x80\x99. The whole game depends on keeping it going.\xE2\x80\x9D "
+    "42": 
+      name: musicians
+      filter_id: ""
+      page_id: 16
+      id: 42
+      content: |-
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Lacey Brown" instrument="Backup Vocals" />
+        <r:snippet name="song_musician" musician="Phillip Peterson" instrument="Cello" />
+    "20": 
+      name: musicians
+      filter_id: ""
+      page_id: 9
+      id: 20
+      content: |-
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Mark Noguchi" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Accordian" />
+        <r:snippet name="song_musician" musician="Chris Kennedy" instrument="Drums" />
+        <r:snippet name="song_musician" musician="Lacey Brown" instrument="Vibraphone" />
+    "31": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 19
+      id: 31
+      content: "Hello. Had you forgotten me? \r\n\
+        I\xE2\x80\x99ve come to veto your paradise\r\n\
+        You left me deep in misery\r\n\
+        And I think it\xE2\x80\x99s time that you think twice\r\n\
+        \r\n\
+        You\xE2\x80\x99re floating six feet off the ground\r\n\
+        Enveloped in celestial bliss\r\n\
+        I am the weight that pulls you down\r\n\
+        I\xE2\x80\x99ll be disillusion\xE2\x80\x99s catalyst\r\n\
+        \r\n\
+        \r\n\
+        Men always called you a work of art\r\n\
+        Never liked to see a soul in pain\r\n\
+        You always had a tender heart\r\n\
+        And I trust it\xE2\x80\x99s something you retain\r\n\
+        \r\n\
+        If you love me, you\xE2\x80\x99ll get rid\r\n\
+        Of that awful smile on your face\r\n\
+        I\xE2\x80\x99d be willing to bet a hundred quid\r\n\
+        That you\xE2\x80\x99ll break down and beg for grace\r\n\
+        \r\n\
+        Did you need me?\r\n\
+        Did you miss me?\r\n\
+        Can you hear me?\r\n\
+        Are you listening?\r\n\
+        I\xE2\x80\x99m existing\r\n\
+        In the gangrene\r\n\
+        Did you miss me?\r\n\
+        Did you need me?\r\n\
+        \r\n\
+        \r\n\
+        As long as there\xE2\x80\x99s a single lost soul like me\r\n\
+        Your levity is farce and vanity\r\n\
+        And a mockery of humanity\r\n\
+        \r\n\
+        \r\n\
+        Why isn\xE2\x80\x99t this working?\r\n\
+        I\xE2\x80\x99m jerking your arm\r\n\
+        But you remain unharmed\r\n\
+        \r\n\
+        Why am I getting nowhere?\r\n\
+        I\xE2\x80\x99m so scared that I\xE2\x80\x99m\r\n\
+        Powerless this time"
+    "19": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 9
+      id: 19
+      content: "I\xE2\x80\x99ve felt the cold sunlight piercing my skin\r\n\
+        I\xE2\x80\x99ve felt the sharp glass on my feet\r\n\
+        It\xE2\x80\x99s some sort of nightmare I\xE2\x80\x99ve found myself in\r\n\
+        I think I\xE2\x80\x99ll return to my seat\r\n\
+        It\xE2\x80\x99s not hard to see that, here, I don\xE2\x80\x99t belong\r\n\
+        It\xE2\x80\x99s no fun to feel like a wraith\r\n\
+        Back home in the shadows, I always felt strong\r\n\
+        I know it\xE2\x80\x99s not real, but it\xE2\x80\x99s safe\r\n\
+        \r\n\
+        They\xE2\x80\x99ve dropped us amidst these bewildering sights\r\n\
+        But they can\xE2\x80\x99t manipulate me\r\n\
+        They want to me to soar to new spiritual heights\r\n\
+        And forget what I\xE2\x80\x99ve always believed\r\n\
+        But I\xE2\x80\x99ve always created my own happiness\r\n\
+        I\xE2\x80\x99ve never been one to have faith\r\n\
+        That life can be fuller and deeper than this\r\n\
+        I know it\xE2\x80\x99s not true but it\xE2\x80\x99s safe\r\n\
+        \r\n\
+        Everyone here thinks they\xE2\x80\x99re better than me\r\n\
+        I\xE2\x80\x99m sick of their mocking disdain\r\n\
+        These bastards pretend they can cure my disease\r\n\
+        But they don\xE2\x80\x99t\xE2\x80\x94and they can\xE2\x80\x99t\xE2\x80\x94feel my pain\r\n\
+        Forgive my disinterest in \xE2\x80\x9Ccoming alive\xE2\x80\x9D:\r\n\
+        I\xE2\x80\x99ll opt for my comforting grave\r\n\
+        Clutching the darkness, I\xE2\x80\x99ve always survived\r\n\
+        I know it\xE2\x80\x99s not good, but it\xE2\x80\x99s safe"
+    "53": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 26
+      id: 53
+      content: "\xE2\x80\x9CI don\xE2\x80\x99t know you, Sir,\xE2\x80\x9D said I, taking my seat beside him. \r\n\
+        \r\n\
+        \xE2\x80\x9CMy name is George,\xE2\x80\x9D he answered. \xE2\x80\x9CGeorge MacDonald.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9COh!\xE2\x80\x9D I cried. \xE2\x80\x9CThen you can tell me! You at least will not deceive me.\xE2\x80\x9D Then, supposing that these expressions of confidence needed some explanation, I tried, trembling to tell this man all that his writings had done for me. I tried to tell how a certain frosty afternoon at Leatherhead Station when I first bought a copy of Phantastes (being then about sixteen years old) had been to me what the first sight of Beatrice had been to Dante: Here begins the New Life\xE2\x80\xA6. \r\n\
+        \r\n\
+        \xE2\x80\x9CYe had started,\xE2\x80\x9D said my Teacher, \xE2\x80\x9Cto talk of something more profitable.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CSir,\xE2\x80\x9D said I, \xE2\x80\x9CI had almost forgotten it, and I have no anxiety about the answer now, though I have still a curiosity. It is about these Ghosts. Do any of them stay? Can they stay? Is any real choice offered to them? How do they come to be here?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CDid ye never hear of the Refrigerium? It means that the damned have holidays\xE2\x80\x94excursions, ye understand.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CBut if they come here they can really stay?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CAye. Ye\xE2\x80\x99ll have heard that the emperor Trajan did.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CBut what of the poor Ghosts who never get into the omnibus at all?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CEveryone who wishes it does. Never fear. There are only two kinds of people in the end: those who say to God, \xE2\x80\x98Thy will be done,\xE2\x80\x99 and those to whom God says, \xE2\x80\x98Thy will be done.\xE2\x80\x99 All that are in Hell, choose it. Without that self-choice there could be no Hell. No soul that seriously and constantly desires joy will ever miss it.\xE2\x80\x9D "
+    "3": 
+      name: body
+      filter_id: Textile
+      page_id: 2
+      id: 3
+      content: |
+        The file you were looking for could not be found.
+        
+        It is possible that you typed the URL incorrectly or that you clicked on a bad link.
+        
+        "Back to Home Page":/
+
+    "43": 
+      name: musicians
+      filter_id: ""
+      page_id: 17
+      id: 43
+      content: |
+        <r:snippet name="song_musician" musician="Phil Woodward" instrument="Rhythm Guitar, Vocals" />
+        <r:snippet name="song_musician" musician="Myron Marston" instrument="Lead Guitar" />
+        <r:snippet name="song_musician" musician="Mark Noguchi" instrument="Bass" />
+        <r:snippet name="song_musician" musician="Bobby Jacky" instrument="Keyboard" />
+        <r:snippet name="song_musician" musician="Chris Kennedy" instrument="Drums" />
+
+    "32": 
+      name: lyrics
+      filter_id: Textile
+      page_id: 20
+      id: 32
+      content: "It's come, It's come, It's come, It's come\r\n\
+        Sleepers, awake!\r\n\
+        \r\n\
+        _If you open your eyes, you\xE2\x80\x99ll see it\xE2\x80\x99s heaven_"
+    "10": 
+      name: extended
+      filter_id: ""
+      page_id: 5
+      id: 10
+      content: ""
+    "4": 
+      name: extended
+      filter_id: ""
+      page_id: 2
+      id: 4
+      content: ""
+    "54": 
+      name: book_excerpt
+      filter_id: Textile
+      page_id: 27
+      id: 54
+      content: "\xE2\x80\x9CLook here; isn\xE2\x80\x99t one going to be allowed to go on painting?\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CLooking comes first.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CWhat do you mean?\xE2\x80\x9D said the Ghost. \r\n\
+        \r\n\
+        \xE2\x80\x9CWhen you painted on earth\xE2\x80\x94at least in your earlier days\xE2\x80\x94it was because you caught glimpses of Heaven in the earthly landscape. The success of your painting was that it enabled others to see the glimpses too. But here you are having the thing itself. It is from here that the messages came. There is no good telling us about this country, for we see it already. In fact we see it better than you do. If you are interested in the country only for the sake of painting it, you\xE2\x80\x99ll never learn to see the country.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9CBut that\xE2\x80\x99s just how a real artist is interested in the country.\xE2\x80\x9D\r\n\
+        \r\n\
+        \xE2\x80\x9CNo. You\xE2\x80\x99re forgetting,\xE2\x80\x9D said the Spirit. \xE2\x80\x9CThat was not how you began. Light itself was your first love: you loved paint only as a means of telling about light.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9COh, that\xE2\x80\x99s ages ago,\xE2\x80\x9D said the Ghost. \xE2\x80\x9COne grows out of that. Of course, you haven\xE2\x80\x99t seen my later works. One becomes more and more interested in paint for its own sake.\xE2\x80\x9D \r\n\
+        \r\n\
+        \xE2\x80\x9COne does, indeed. I also have had to recover from that. It was all a snare. Ink and catgut and paint were necessary down there, but they are also dangerous stimulants. Every poet and musician and artist, but for Grace, is drawn away from love of the thing he tells, to love of the telling till, down in Deep Hell, they cannot be interested in God at all but only in what they say about Him.\xE2\x80\x9D "
+    "5": 
+      name: body
+      filter_id: Textile
+      page_id: 3
+      id: 5
+      content: "_Ghosts and Spirits_ is a concept album by Phil Woodward based on C.S. Lewis\xE2\x80\x99s classic text, _The Great Divorce_. It was released in August 2007.\r\n\
+        \r\n\
+        Woodward\xE2\x80\x99s lyrics for _Ghosts and Spirits_ predominantly consist of first-person ruminations, from the perspective of the various characters the narrator encounters in the story. It has been pointed out that Lewis, eager to depict the deep immaturity of his characters, tends to portray them as somewhat ridiculous; Woodward is able to humanize them, despite their perversity. His lyrical style, reminiscent of Sufjan Stevens, is philosophical yet playful, tender but often dark.\r\n\
+        \r\n\
+        Musically, the album ranges widely, from the austere intimacy of \xE2\x80\x9C(Only) A Mother\xE2\x80\x9D, to the epic prog-rock-esque development of \xE2\x80\x9CThe Lizard and the Stallion\xE2\x80\x9D, to the bitterly playful folk/pop of \xE2\x80\x9CSafety\xE2\x80\x9D. The sophisticated lead guitar stylings of Myron Marston\xE2\x80\x94a long-time musical collaborator of Woodward\xE2\x80\x99s\xE2\x80\x94color the album throughout.\r\n\
+        \r\n\
+        _Ghosts and Spirits_ was mixed and mastered by Mark Clem at \"Soul Kitchen Studios\":http://www.soulkitchenstudios.com/.  Album artwork was designed by Chuck Potrykus. \r\n\
+        \r\n\
+        Use the song navigation menu below to visit pages containing lyrics and streaming audio for each song.\r\n\
+        \r\n\
+        <r:snippet name=\"song_navigation\" />"
+description: Backup of the database as of Thu, 03 Dec 2009 13:09:00 -0800
