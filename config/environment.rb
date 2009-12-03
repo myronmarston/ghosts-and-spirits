@@ -17,6 +17,8 @@ Radiant::Initializer.run do |config|
   # can be used as a placeholder for all extensions not explicitly named.
   # config.extensions = [ :all ]
 
+  config.load_paths << File.join(Rails.root, 'lib')
+
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
   # Make sure the secret is at least 30 characters and all random,
@@ -74,6 +76,13 @@ Radiant::Initializer.run do |config|
     ActiveSupport::Inflector.inflections do |inflect|
       inflect.uncountable 'config'
     end
+  end
+
+  # This is a bit of a hack, but I couldn't find any other way to make sure this module gets included
+  # once, and only once in dev mode.  Radiant seems to have different auto-loading / class-caching behavior
+  # compared to a standard Rails app.
+  config.to_prepare do
+    SiteController.send(:include, SiteControllerEtagExtension) unless SiteController.included_modules.include?(SiteControllerEtagExtension)
   end
 
   config.gem 'will_paginate'
