@@ -1,4 +1,4 @@
-namespace :wimpy do
+namespace :gs do
   desc "Generate the playlist files for wimpy"
   task :generate_playlists => :environment do
     playlist_dir = File.join(Rails.root, "public", "wimpy", "playlists")
@@ -18,5 +18,10 @@ namespace :wimpy do
 
       File.open(playlist_file_name, "w") { |f| f.write xml }
     end    
+  end
+
+  desc "Copy the songs in to the local directory (sometimes necessary after a branch switch)"
+  task :copy_songs => :environment do
+    cp_r File.join(Rails.root, '..', 'ghosts-and-spirits-songs', '.'), File.join(Rails.root, "public", "songs")
   end
 end

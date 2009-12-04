@@ -1,4 +1,4 @@
-songs/**/*.mp3
+public/songs/**/*.mp3
 log/*.log
 *~
 db/*.sqlite*
