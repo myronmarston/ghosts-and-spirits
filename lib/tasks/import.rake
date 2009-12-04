@@ -2,7 +2,13 @@ namespace :gs do
   namespace :import do
 
     def sql_string(table)
-      File.open(File.join(Rails.root, 'db', 'original_site_data', "#{table}.sql")) { |f| f.read }
+      file = File.join(Rails.root, 'db', 'original_site_data', "#{table}.sql")
+      if File.exist?(file)
+        File.open(file) { |f| f.read }
+      else
+        puts "File #{file} does not exist.  The file is needed for this rake task to run."
+        exit
+      end
     end
 
     def songs
