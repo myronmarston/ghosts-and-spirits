@@ -472,10 +472,10 @@ records:
       virtual: false
       title: Bleeding Charity
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:28 Z
+      updated_at: 2009-12-16 05:04:29 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 85
+      lock_version: 93
       id: 11
       enable_comments: true
       breadcrumb: Bleeding Charity
@@ -544,10 +544,10 @@ records:
       virtual: false
       title: Thirst for Water, Inquiry for Truth
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:27 Z
+      updated_at: 2009-12-16 05:04:28 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 77
+      lock_version: 83
       id: 12
       enable_comments: true
       breadcrumb: Thirst for Water, Inquiry for Truth
@@ -616,10 +616,10 @@ records:
       virtual: false
       title: Trust in a Sigh
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:26 Z
+      updated_at: 2009-12-16 05:04:27 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 39
+      lock_version: 42
       id: 13
       enable_comments: true
       breadcrumb: Trust in a Sigh
@@ -640,10 +640,10 @@ records:
       virtual: false
       title: The Grey Town
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:28 Z
+      updated_at: 2009-12-16 05:04:29 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 222
+      lock_version: 231
       id: 8
       enable_comments: true
       breadcrumb: The Grey Town
@@ -688,10 +688,10 @@ records:
       virtual: false
       title: The Teacher
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:27 Z
+      updated_at: 2009-12-16 05:04:28 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 42
+      lock_version: 46
       id: 14
       enable_comments: true
       breadcrumb: The Teacher
@@ -712,10 +712,10 @@ records:
       virtual: false
       title: Safety
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:28 Z
+      updated_at: 2009-12-16 05:04:29 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 62
+      lock_version: 68
       id: 9
       enable_comments: true
       breadcrumb: Safety
@@ -760,10 +760,10 @@ records:
       virtual: false
       title: First Love
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:25 Z
+      updated_at: 2009-12-16 05:04:26 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 116
+      lock_version: 120
       id: 15
       enable_comments: true
       breadcrumb: First Love
@@ -808,10 +808,10 @@ records:
       virtual: false
       title: (Only) a Mother
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:28 Z
+      updated_at: 2009-12-16 05:04:28 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 117
+      lock_version: 124
       id: 16
       enable_comments: true
       breadcrumb: (Only) a Mother
@@ -856,10 +856,10 @@ records:
       virtual: false
       title: The Lizard and the Stallion
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:28 Z
+      updated_at: 2009-12-16 05:04:29 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 63
+      lock_version: 69
       id: 17
       enable_comments: true
       breadcrumb: The Lizard and the Stallion
@@ -952,10 +952,10 @@ records:
       virtual: false
       title: Saint Sarah
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:25 Z
+      updated_at: 2009-12-16 05:04:26 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 44
+      lock_version: 47
       id: 18
       enable_comments: true
       breadcrumb: Saint Sarah
@@ -1000,10 +1000,10 @@ records:
       virtual: false
       title: The Sunrise
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:28 Z
+      updated_at: 2009-12-16 05:04:28 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 58
+      lock_version: 64
       id: 20
       enable_comments: true
       breadcrumb: The Sunrise
@@ -1024,10 +1024,10 @@ records:
       virtual: false
       title: Vetoing Heaven
       change_frequency: weekly
-      updated_at: 2009-12-03 21:08:27 Z
+      updated_at: 2009-12-16 05:04:28 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 50
+      lock_version: 55
       id: 19
       enable_comments: true
       breadcrumb: Vetoing Heaven
@@ -1099,7 +1099,7 @@ records:
       updated_at: 2009-12-02 22:36:28 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 41
+      lock_version: 42
       id: 10
       enable_comments: true
       breadcrumb: The Grey Town
@@ -1164,9 +1164,9 @@ records:
       name: master
       created_at: 2009-11-26 00:47:53 Z
       content_type: ""
-      updated_at: 2009-12-02 22:32:15 Z
+      updated_at: 2009-12-16 05:05:06 Z
       created_by_id: 1
-      lock_version: 17
+      lock_version: 18
       id: 1
       content: |
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -1179,6 +1179,10 @@ records:
             <link type="text/css" rel="Stylesheet" media="screen" href="/stylesheets/song_menu.css" />
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
             <r:snippet name="rating_asset_includes" />
+        
+            <!--[if IE]>
+              <link href="/stylesheets/ghostsandspirits_ie.css" media="screen" rel="Stylesheet" type="text/css" />   
+            <![endif]-->
         
             <!--[if lt IE 7]>
                 <link href="/stylesheets/ghostsandspirits_ie6.css" media="screen" rel="Stylesheet" type="text/css" />        
@@ -2363,4 +2367,4 @@ records:
         Use the song navigation menu below to visit pages containing lyrics and streaming audio for each song.\r\n\
         \r\n\
         <r:snippet name=\"song_navigation\" />"
-description: Backup of the database as of Thu, 03 Dec 2009 13:09:00 -0800
+description: Backup of the database as of Tue, 15 Dec 2009 21:05:32 -0800
