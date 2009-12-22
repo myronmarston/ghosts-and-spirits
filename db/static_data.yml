@@ -472,10 +472,10 @@ records:
       virtual: false
       title: Bleeding Charity
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:29 Z
+      updated_at: 2009-12-22 06:07:56 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 93
+      lock_version: 101
       id: 11
       enable_comments: true
       breadcrumb: Bleeding Charity
@@ -544,10 +544,10 @@ records:
       virtual: false
       title: Thirst for Water, Inquiry for Truth
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:28 Z
+      updated_at: 2009-12-22 06:07:56 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 83
+      lock_version: 89
       id: 12
       enable_comments: true
       breadcrumb: Thirst for Water, Inquiry for Truth
@@ -616,10 +616,10 @@ records:
       virtual: false
       title: Trust in a Sigh
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:27 Z
+      updated_at: 2009-12-22 06:07:55 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 42
+      lock_version: 45
       id: 13
       enable_comments: true
       breadcrumb: Trust in a Sigh
@@ -634,16 +634,16 @@ records:
       updated_by_id: 1
       slug: the-grey-town
       class_name: ""
-      average_rating: 4.63
+      average_rating: 4.67
       sitemap: true
       created_at: 2009-11-26 03:34:12 Z
       virtual: false
       title: The Grey Town
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:29 Z
+      updated_at: 2009-12-22 06:07:56 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 231
+      lock_version: 241
       id: 8
       enable_comments: true
       breadcrumb: The Grey Town
@@ -688,10 +688,10 @@ records:
       virtual: false
       title: The Teacher
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:28 Z
+      updated_at: 2009-12-22 06:07:55 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 46
+      lock_version: 50
       id: 14
       enable_comments: true
       breadcrumb: The Teacher
@@ -712,10 +712,10 @@ records:
       virtual: false
       title: Safety
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:29 Z
+      updated_at: 2009-12-22 06:07:56 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 68
+      lock_version: 74
       id: 9
       enable_comments: true
       breadcrumb: Safety
@@ -760,10 +760,10 @@ records:
       virtual: false
       title: First Love
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:26 Z
+      updated_at: 2009-12-22 06:07:54 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 120
+      lock_version: 124
       id: 15
       enable_comments: true
       breadcrumb: First Love
@@ -808,10 +808,10 @@ records:
       virtual: false
       title: (Only) a Mother
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:28 Z
+      updated_at: 2009-12-22 06:07:56 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 124
+      lock_version: 131
       id: 16
       enable_comments: true
       breadcrumb: (Only) a Mother
@@ -850,16 +850,16 @@ records:
       updated_by_id: 1
       slug: the-lizard-and-the-stallion
       class_name: ""
-      average_rating: 4.0
+      average_rating: 4.14
       sitemap: true
       created_at: 2009-11-26 19:34:43 Z
       virtual: false
       title: The Lizard and the Stallion
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:29 Z
+      updated_at: 2009-12-22 06:07:57 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 69
+      lock_version: 77
       id: 17
       enable_comments: true
       breadcrumb: The Lizard and the Stallion
@@ -952,10 +952,10 @@ records:
       virtual: false
       title: Saint Sarah
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:26 Z
+      updated_at: 2009-12-22 06:07:54 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 47
+      lock_version: 50
       id: 18
       enable_comments: true
       breadcrumb: Saint Sarah
@@ -1000,10 +1000,10 @@ records:
       virtual: false
       title: The Sunrise
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:28 Z
+      updated_at: 2009-12-22 06:07:56 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 64
+      lock_version: 70
       id: 20
       enable_comments: true
       breadcrumb: The Sunrise
@@ -1024,10 +1024,10 @@ records:
       virtual: false
       title: Vetoing Heaven
       change_frequency: weekly
-      updated_at: 2009-12-16 05:04:28 Z
+      updated_at: 2009-12-22 06:07:56 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 55
+      lock_version: 60
       id: 19
       enable_comments: true
       breadcrumb: Vetoing Heaven
@@ -1099,7 +1099,7 @@ records:
       updated_at: 2009-12-02 22:36:28 Z
       created_by_id: 1
       priority: "0.5"
-      lock_version: 42
+      lock_version: 43
       id: 10
       enable_comments: true
       breadcrumb: The Grey Town
@@ -1164,9 +1164,9 @@ records:
       name: master
       created_at: 2009-11-26 00:47:53 Z
       content_type: ""
-      updated_at: 2009-12-16 05:05:06 Z
+      updated_at: 2009-12-22 06:09:10 Z
       created_by_id: 1
-      lock_version: 18
+      lock_version: 19
       id: 1
       content: |
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -1209,6 +1209,17 @@ records:
                     </div>
                 </div>
             </div>
+        
+        <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-3938147-1");
+        pageTracker._trackPageview();
+        } catch(err) {}</script>
+        
         </body>
         </html>
 
@@ -2367,4 +2378,4 @@ records:
         Use the song navigation menu below to visit pages containing lyrics and streaming audio for each song.\r\n\
         \r\n\
         <r:snippet name=\"song_navigation\" />"
-description: Backup of the database as of Tue, 15 Dec 2009 21:05:32 -0800
+description: Backup of the database as of Mon, 21 Dec 2009 22:11:02 -0800
