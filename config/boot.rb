@@ -1,5 +1,6 @@
 # Don't change this file!
 # Configure your app in config/environment.rb and config/environments/*.rb
+require 'thread' # to load Mutex
 
 RAILS_ROOT = File.expand_path("#{File.dirname(__FILE__)}/..") unless defined?(RAILS_ROOT)
 
@@ -59,6 +60,14 @@ module Radiant
   class Boot
     def run
       load_initializer
+
+      Rails::Initializer.class_eval do
+        def load_gems
+          @bundler_loaded ||= Bundler.require :default, Rails.env
+        end
+      end
+
+      Rails::Initializer.run(:set_load_path)
     end
     
     def load_initializer
