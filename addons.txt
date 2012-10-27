@@ -1,0 +1,5 @@
+newrelic:standard
+pgbackups:auto-month
+sendgrid:starter
+shared-database:5mb
+
