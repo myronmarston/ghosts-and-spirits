@@ -84,8 +84,4 @@ Radiant::Initializer.run do |config|
   config.to_prepare do
     SiteController.send(:include, SiteControllerEtagExtension) unless SiteController.included_modules.include?(SiteControllerEtagExtension)
   end
-
-  config.gem 'will_paginate'
-  config.gem 'fastercsv'
-  config.gem 'sanitize'
 end
