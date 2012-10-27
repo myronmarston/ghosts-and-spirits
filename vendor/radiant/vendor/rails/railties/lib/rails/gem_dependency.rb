@@ -116,6 +116,7 @@ module Rails
     end
 
     def requirement
+      return nil
       r = version_requirements
       (r == Gem::Requirement.default) ? nil : r
     end
