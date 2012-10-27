@@ -28,3 +28,4 @@ gem 'tzinfo', '0.3.12'
 gem 'sqlite3-ruby', '1.2.4', :group => 'development'
 
 gem 'foreman'
+gem 'ruby-debug', :group => 'development'
