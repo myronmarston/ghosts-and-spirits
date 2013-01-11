@@ -84,4 +84,7 @@ Radiant::Initializer.run do |config|
   config.to_prepare do
     SiteController.send(:include, SiteControllerEtagExtension) unless SiteController.included_modules.include?(SiteControllerEtagExtension)
   end
+
+  # https://groups.google.com/group/rubyonrails-security/browse_thread/thread/eb56e482f9d21934
+  ActionController::Base.param_parsers.delete(Mime::XML)
 end
